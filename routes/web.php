@@ -14,5 +14,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('layout.index');
+    return view('welcome');
 });
+Route::get('/food','\App\Http\Controllers\testcontrolleur@food',);
+Route::get('/bar','\App\Http\Controllers\testcontrolleur@bar',);
+
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth'])->name('dashboard');
+
+// require __DIR__.'/auth.php';
+Route::get('/dashboard', function () {
+        return view('master');
+     })->middleware(['auth'])->name('dashboard');
+    
+     require __DIR__.'/auth.php';
