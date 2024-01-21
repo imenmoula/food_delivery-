@@ -1,6 +1,4 @@
-<!--**********************************
-            Nav header start
-        ***********************************-->
+
         <div class="nav-header">
             <a href="index.html" class="brand-logo">
 							<img class="logo-abbr" src="admin/images/logo.png" alt="">
@@ -15,14 +13,8 @@
                 </div>
             </div>
         </div>
-        <!--**********************************
-            Nav header end
-        ***********************************-->
+       
 
-        <!--**********************************
-            Header start
-        ***********************************-->
-        
 		<div class="chatbox">
 			<div class="chatbox-close"></div>
 			<div class="custom-tab-1">
