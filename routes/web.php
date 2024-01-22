@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\admin\CategoryController;
+use App\Models\category;
+use GuzzleHttp\Promise\Create;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,3 +32,15 @@ Route::get('/dashboard', function () {
      })->middleware(['auth'])->name('dashboard');
     
      require __DIR__.'/auth.php';
+
+//list categorie
+Route::get('/',[Categorycontroller::class,'index'])->name('admin.index');
+Route::get('admin/create',[CategoryController::class,'create'])->name('admin.Create');
+Route::post('admin/store',[CategoryController::class,'store'])->name('admin.store');
+Route::get('admin/{id}/edit',[CategoryController::class,'edit'])->name('admin.edit');
+Route::put('admin/{id}/update',[CategoryController::class,'update'])->name('admin.update');
+Route::delete('admin/{id}/delete',[CategoryController::class,'destory']);
+//Route::get('admin/{id}/show',[CategoryController::class,'show']);
+Route::get('/categories/{id}', 'YourController@show')->name('categories.show');
+
+
