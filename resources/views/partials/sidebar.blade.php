@@ -1,84 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        .deznav {
-            background-color: #333;
-            width: 200px;
-            height: 100vh;
-            position: fixed;
-            top: 0;
-            left: -200px;
-            overflow-y: auto;
-            transition: left 0.3s ease;
-        }
-
-        .deznav-scroll {
-            padding: 20px;
-        }
-
-        .deznav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .deznav a {
-            text-decoration: none;
-            color: #fff;
-            display: block;
-            padding: 10px 0;
-        }
-
-        .deznav a:hover {
-            background-color: #555;
-        }
-
-        @media screen and (max-width: 768px) {
-            .deznav {
-                left: -100%;
-            }
-
-            .deznav.show {
-                left: 0;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <title>Horizontal Bootstrap Menu</title>
 </head>
 <body>
 
-    <div class="deznav">
-        <div class="deznav-scroll">
-            <ul>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="{{url('category')}}">Category</a></li>
-                <li><a href="#">Review</a></li>
-                <li><a href="#">Order</a></li>
-                <li><a href="#">Order List</a></li>
-                <li><a href="#">General Customers</a></li>
-            </ul>
-        </div>
-    </div>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <ul class="navbar-nav">
+    <li class="nav-item active">
+      <a class="nav-link" href="#">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{url('categories')}}">Liste des Categories</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{url('menus')}}">liste des plats</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Page 3</a>
+    </li>
+  </ul>
+</nav>
 
-    <button onclick="toggleMenu()">Toggle Menu</button>
-
-    <script>
-        function toggleMenu() {
-            var menu = document.querySelector('.deznav');
-            menu.classList.toggle('show');
-        }
-    </script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 </html>
+
+  
 
 
 

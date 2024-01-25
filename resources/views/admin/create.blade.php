@@ -25,11 +25,20 @@
             <h1>Nouveaux Categories</h1>
             <div class="col-sm-8">
                 <div class="card mt-3 p-3">
-                <form method ="POST" action="/admin/store" enctype="multipart/form-data">
+                <form method ="POST" action="admin/store" enctype="multipart/form-data">
                     @csrf
-                    <div class="form-group">
-                        <label>Nom:</label>
-                        <input type="text" class="form-control"  value="{{old('name')}}" name="name"/>
+                        <div class="form-group">
+                            <label >Nom de categorie:</label>
+                            <select class="form-select" name="name">
+                                <option  ></option>
+                                <option >Healthy food</option>
+                                <option >Brunch</option>
+                                <option  >Traditional Food</option>
+                                <option >dinner</option>
+                            </select>
+                
+                        </div>
+
                         @if($errors->has('name'))
                         <span class="text-danger">{{$errors->first('name')}}</span>
                         @endif

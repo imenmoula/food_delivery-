@@ -10,9 +10,8 @@ class CategoryController extends Controller
 {
     public function index()
     {
-        return view('admin.index',[
-            'admin'=>category::get()
-        ]);    
+        $categorie=category::all();
+        return view('admin.index',compact('categories'));    
     }
     public function create()
     {
@@ -22,7 +21,7 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name'=>'required',
+            'name' => 'required|string|max:255',
             'description'=>'required',
             'image'=>'required|mimes:jpeg,jpg,png,gif|max:10000'
 
@@ -34,7 +33,8 @@ class CategoryController extends Controller
       $categorie->name=$request->name;
       $categorie->description=$request->description;
       $categorie->save();
-      return  back()->withSuccess( 'Categorie ajouter avec succe');
+      return redirect()->route('admin.index')->withSuccess( 'Categorie ajouter avec succe');
+
 
     }
     /*********update ****************** */
@@ -59,7 +59,7 @@ class CategoryController extends Controller
       $categorie->name=$request->name;
       $categorie->description=$request->description;
       $categorie->save();
-      return  back()->withSuccess( 'Categorie modifier  avec succe');
+      return  redirect()->route('admin.index')->withSuccess( 'Categorie modifier  avec succe');
 
     }
     /****************suppression****************** */
@@ -76,15 +76,8 @@ class CategoryController extends Controller
 //     return view('admin.show',['categorie'=>$categorie]);
 
 //    }
-public function show($id)
-{
-    $category = category::find($id);
-
-    if (!$category) {
-        abort(404); // or handle the case when the category is not found
-    }
-
-    return view('admin.show', ['category' => $category]);
+public function show($id){
+    return view('admin.show', compact('category'));
 }
 
 }

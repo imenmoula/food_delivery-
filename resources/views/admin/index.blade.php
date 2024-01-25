@@ -11,6 +11,11 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
+    <!--menu *****************************************************************************************************************!-->
+    @include('partials.sidebar') 
+
+
+<!---------------------------------------------------------------------------------------------------------------!----->
     <h1>Category</h1>
    <div class="container">
     <div class="text-right" >
@@ -18,6 +23,7 @@
     </div>
 
     </div>
+    
 <div class="container">
     <h2>Liste des Categories:</h2>
     <table class="table table-hover mt-2">
@@ -60,5 +66,7 @@
         </tbody>
    </table>
  </div>
+ 
 </body>
 </html>
+ 
