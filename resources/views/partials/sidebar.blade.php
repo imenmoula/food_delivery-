@@ -1,43 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <title>Horizontal Bootstrap Menu</title>
-</head>
-<body>
-
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <ul class="navbar-nav">
-    <li class="nav-item active">
-      <a class="nav-link" href="#">Home</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="{{url('categories')}}">Liste des Categories</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="{{url('menus')}}">liste des plats</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Page 3</a>
-    </li>
-  </ul>
-</nav>
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-</body>
-</html>
-
-  
-
-
-
-
-{{-- <div class="deznav">
+<div class="deznav">
     <div class="deznav-scroll">
         <ul class="metismenu" id="menu">
             <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
@@ -178,14 +139,12 @@
             </li>
         </ul>
     
-        <div class="add-menu-sidebar">
-            <img src="public/images/icon1.png" alt=""/>
-            <p>Organize your menus through button bellow</p>
-            <a href="javascript:void(0);" class="btn btn-primary btn-block light">+ Add Menus</a>
-        </div>
-        <div class="copyright">
-            <p><strong>Davur - Restaurant Admin Dashboard</strong> © 2020 All Rights Reserved</p>
-            <p>Made with <i class="fa fa-heart"></i> by DexignZone</p>
-        </div>
+        
+        
     </div>
-</div>  --}}
+</div> 
+
+  
+
+
+

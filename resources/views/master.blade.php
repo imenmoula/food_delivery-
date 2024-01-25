@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
+<!-- Mirrored from davur.dexignzone.com/laravel/demo/index by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Jan 2024 15:18:41 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,16 +12,16 @@
 	
 	<meta name="description" content="Some description for the page"/>
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="admin/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="public/images/favicon.png">
 	
 	
 	
-	 
-						<link href="{{asset('admin/vendor/bootstrap-select/dist/css/bootstrap-select.min.css')}}" rel="stylesheet" type="text/css"/>
-						<link href="{{asset('admin/vendor/jqvmap/css/jqvmap.min.css')}}" rel="stylesheet" type="text/css"/>
-						<link href="{{asset('admin/vendor/chartist/css/chartist.min.css')}}" rel="stylesheet" type="text/css"/>
-						<link href="{{asset('admin/2.0/LineIcons.css')}}" rel="stylesheet" type="text/css"/>
-					     <link href="{{asset('admin/css/style.css')}}" rel="stylesheet" type="text/css"/>
+    <link href="{{asset('admin/vendor/bootstrap-select/dist/css/bootstrap-select.min.css')}}"
+    rel="stylesheet" type="text/css"/>
+   <link href="{{asset('admin/vendor/jqvmap/css/jqvmap.min.css')}}" rel="stylesheet" type="text/css"/>
+   <link href="{{asset('admin/vendor/chartist/css/chartist.min.css')}}" rel="stylesheet" type="text/css"/>
+   <link href="{{asset('admin/2.0/LineIcons.css')}}" rel="stylesheet" type="text/css"/>
+    <link href="{{asset('admin/css/style.css')}}" rel="stylesheet" type="text/css"/>
 				
 
 
@@ -45,11 +48,43 @@
     ***********************************-->
     <div id="main-wrapper">
 
-         <!--**********************************
-            Header start ti-comment-alt
+        <!--**********************************
+            Nav header start
+        ***********************************-->
+        <div class="nav-header">
+            <a href="index.html" class="brand-logo">
+							<img class="logo-abbr" src="{{asset('admin/images/logo.png')}}" alt="">
+						                <img class="logo-compact" src={{asset('admin/images/logo-text.png')}}" alt="">
+                <img class="brand-title" src="{{asset('admin/images/logo-text.png')}}" alt="">
+				
+            </a>
+
+            <div class="nav-control">
+                <div class="hamburger">
+                    <span class="line"></span><span class="line"></span><span class="line"></span>
+                </div>
+            </div>
+        </div>
+        <!--**********************************
+            Nav header end
         ***********************************-->
 
-        	@include('partials.header')
+        <!--**********************************
+            Header start
+        ***********************************-->
+        
+		
+		<!--**********************************
+            Chat box End
+        ***********************************-->
+		
+		<!--**********************************
+            Header start
+        ***********************************-->
+        @include('partials.header')
+        <!--**********************************
+            Header end ti-comment-alt
+        ***********************************-->		
 		
         <!--**********************************
             Header end ti-comment-alt
@@ -58,9 +93,10 @@
         <!--**********************************
             Sidebar start
         ***********************************-->
-        @include('partials.sidebar') 
-        
-        <!--**********************************
+
+        @include('partials.sidebar')
+     
+              <!--**********************************
             Sidebar end
         ***********************************-->
 
@@ -69,7 +105,12 @@
         <!--**********************************
             Content body start
         ***********************************-->
-       @yield('content')
+        <div class="content-body">
+            <!-- row -->
+                        <!-- row -->
+                        @yield('content')
+			
+        </div>
         <!--**********************************
             Content body end
         ***********************************-->
@@ -78,9 +119,19 @@
         <!--**********************************
             Footer start
         ***********************************-->
-        @include('partials.footer') 
-			
-      
+        
+        @include('partials.footer') 	
+        <!--**********************************
+            Footer end
+        ***********************************-->
+
+		<!--**********************************
+           Support ticket button start
+        ***********************************-->
+
+        <!--**********************************
+           Support ticket button end
+        ***********************************-->
 
 
     </div>
@@ -91,19 +142,21 @@
     <!--**********************************
         Scripts
     ***********************************-->
-	            <script src="{{asset('admin/vendor/global/global.min.js')}}" type="text/javascript"></script>
-				<script src="{{asset('admin/vendor/bootstrap-select/dist/js/bootstrap-select.min.js')}}" type="text/javascript"></script>
-				<script src="{{asset('admin/vendor/chart.js/Chart.bundle.min.js')}}" type="text/javascript"></script>
-				<script src="{{asset('admin/vendor/waypoints/jquery.waypoints.min.js')}}" type="text/javascript"></script>
-				<script src="{{asset('admin/vendor/jquery.counterup/jquery.counterup.min.js')}}" type="text/javascript"></script>
-				<script src="{{asset('admin/vendor/apexchart/apexchart.js')}}" type="text/javascript"></script>
-				<script src="{{asset('admin/vendor/peity/jquery.peity.min.js')}}" type="text/javascript"></script>
-				<script src="{{asset('admin/js/dashboard/dashboard-1.js')}}" type="text/javascript"></script>
-				<script src="{{asset('admin/js/custom.min.js')}}" type="text/javascript"></script>
-				<script src="{{asset('admin/js/deznav-init.')}}" type="text/javascript"></script>
-			<script id="DZScript" src="{{asset('admin/js/w3-global8bb6.js?btn_dir=right')}}"></script>
 
-		
- 	--></body>
+
+            <script src="{{asset('admin/vendor/global/global.min.js')}}" type="text/javascript"></script>
+            <script src="{{asset('admin/vendor/bootstrap-select/dist/js/bootstrap-select.min.js')}}" 
+            type="text/javascript"></script>
+            <script src="{{asset('admin/vendor/chart.js/Chart.bundle.min.js')}}" type="text/javascript"></script>
+            <script src="{{asset('admin/vendor/waypoints/jquery.waypoints.min.js')}}" type="text/javascript"></script>
+            <script src="{{asset('admin/vendor/jquery.counterup/jquery.counterup.min.js')}}" type="text/javascript"></script>
+            <script src="{{asset('admin/vendor/apexchart/apexchart.js')}}" type="text/javascript"></script>
+            <script src="{{asset('admin/vendor/peity/jquery.peity.min.js')}}" type="text/javascript"></script>
+            <script src="{{asset('admin/js/dashboard/dashboard-1.js')}}" type="text/javascript"></script>
+            <script src="{{asset('admin/js/custom.min.js')}}" type="text/javascript"></script>
+            <script src="{{asset('admin/js/deznav-init.')}}" type="text/javascript"></script>
+            <script id="DZScript" src="{{asset('admin/js/w3-global8bb6.js?btn_dir=right')}}"></script>
+
+        </body>
 
 </html>
