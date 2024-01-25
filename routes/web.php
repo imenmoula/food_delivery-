@@ -38,14 +38,14 @@ Route::get('/dashboard', function () {
      require __DIR__.'/auth.php';
 
 //list categorie//////////////////////////////////
-Route::get('/',[Categorycontroller::class,'index'])->name('admin.index');
-Route::get('admin/create',[CategoryController::class,'create'])->name('admin.Create');
-Route::post('admin/store',[CategoryController::class,'store'])->name('admin.store');
-Route::get('admin/{id}/edit',[CategoryController::class,'edit'])->name('admin.edit');
-Route::put('admin/{id}/update',[CategoryController::class,'update'])->name('admin.update');
-Route::delete('admin/{id}/delete',[CategoryController::class,'destory']);
+Route::get('admin/category/',[Categorycontroller::class,'index'])->name('category.index');
+Route::get('admin/category/create',[CategoryController::class,'create'])->name('category.Create');
+Route::post('admin/category/store',[CategoryController::class,'store'])->name('category.store');
+Route::get('admin/category/{id}/edit',[CategoryController::class,'edit'])->name('category.edit');
+Route::put('admin/category/{id}/update',[CategoryController::class,'update'])->name('category.update');
+Route::delete('admin/category/{id}/delete',[CategoryController::class,'destory']);
 //Route::get('admin/{id}/show',[CategoryController::class,'show']);
-Route::get('/categories/{id}', 'YourController@show')->name('categories.show');
+//Route::get('categories/{id}', 'YourController@show')->name('categories.show');
 //list de plat/////////////////////////////////////
 Route::resource('menu',MenuController::class);
 Route::get('/',[MenuController::class,'index']);

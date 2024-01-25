@@ -29,17 +29,13 @@
     <table class="table table-hover mt-2">
         <thead>
             <tr>
-            <th>Id#</th>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Image</th>
-            <th>Action</th>
+        
 
             </tr>
         </thead>
         <tbody>
 
-        @foreach ($admin as $category)
+        @foreach ($categories as $category)
             <tr>
             <td>{{$loop->index+1}}</td>
             <td>{{$category->name}}</td>

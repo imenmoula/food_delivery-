@@ -10,8 +10,8 @@ class CategoryController extends Controller
 {
     public function index()
     {
-        $categorie=category::all();
-        return view('admin.index',compact('categories'));    
+        $categories=category::all();
+        return view('admin.category.index',compact('categories'));
     }
     public function create()
     {
