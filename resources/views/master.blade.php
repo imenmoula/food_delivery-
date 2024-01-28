@@ -2,8 +2,7 @@
 <html lang="en">
 
 
-<!-- Mirrored from davur.dexignzone.com/laravel/demo/index by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Jan 2024 15:18:41 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,8 +15,7 @@
 	
 	
 	
-    <link href="{{asset('admin/vendor/bootstrap-select/dist/css/bootstrap-select.min.css')}}"
-    rel="stylesheet" type="text/css"/>
+    <link href="{{asset('admin/vendor/bootstrap-select/dist/css/bootstrap-select.min.css')}}" rel="stylesheet" type="text/css"/>
    <link href="{{asset('admin/vendor/jqvmap/css/jqvmap.min.css')}}" rel="stylesheet" type="text/css"/>
    <link href="{{asset('admin/vendor/chartist/css/chartist.min.css')}}" rel="stylesheet" type="text/css"/>
    <link href="{{asset('admin/2.0/LineIcons.css')}}" rel="stylesheet" type="text/css"/>

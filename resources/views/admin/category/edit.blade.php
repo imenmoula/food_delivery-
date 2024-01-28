@@ -1,3 +1,5 @@
+@extends('master')
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,25 +22,18 @@
     @endif
 
     <div class="container">
-      
+    
         <div class="row justify-content-center">
-            <h1>Nouveaux Categories</h1>
+            <h1>Modification de Categories</h1>
             <div class="col-sm-8">
                 <div class="card mt-3 p-3">
-                <form method ="POST" action="admin/store" enctype="multipart/form-data">
+                    <h1 class="text-muted">category modifier #{{$categories->id}}</h1>
+                <form method ="POST" action="/admin/{{$categories->id}}/update" enctype="multipart/form-data">
                     @csrf
-                        <div class="form-group">
-                            <label >Nom de categorie:</label>
-                            <select class="form-select" name="name">
-                                <option  ></option>
-                                <option >Healthy food</option>
-                                <option >Brunch</option>
-                                <option  >Traditional Food</option>
-                                <option >dinner</option>
-                            </select>
-                
-                        </div>
-
+                    @method('PUT')
+                    <div class="form-group">
+                        <label>Nom:</label>
+                        <input type="text" class="form-control"  value="{{old('name',$categories->name)}}" name="name"/>
                         @if($errors->has('name'))
                         <span class="text-danger">{{$errors->first('name')}}</span>
                         @endif
@@ -46,8 +41,12 @@
 
                       <div class="form-group">
                         <label>Description:</label>
-                        <textarea class="form-control" row="4"name="description" value="{{old('description')}}"></textarea>  
-                        @if($errors->has('description'))
+                        <textarea class="form-control" 
+                        row="4" 
+                        name="description" 
+                        value="{{old('description',$categories->description)}}">
+                    </textarea>                           
+                    @if($errors->has('description'))
                         <span class="text-danger">{{$errors->first('description')}}</span>
                         @endif
                       
@@ -65,7 +64,7 @@
                       </div>
 
                       
-                      <button type="submit" class="btn btn-primary">Submit</button>
+                      <button type="submit" class="btn btn-primary">Envoyer</button>
                 </form>
                 </div>
             </div>
@@ -73,3 +72,4 @@
     </div>
 </body>
 </html>
+@section
