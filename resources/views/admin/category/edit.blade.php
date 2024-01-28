@@ -14,25 +14,35 @@
 </head>
 <body>
     
-    @if($message=Session::get('success'))
-    <div class="alert alert-success alert-block">
-        <strong>{{$message}}</strong>
-    </div>
+    @if($message = Session::get('success'))
+  <div class="alert alert-success alert-block">
+      <strong>{{$message}}</strong>
+  </div>
+  @endif
 
-    @endif
+  @if($errors->any())
+<div class="alert alert-danger alert-block">
+    <strong>Une erreur s'est produite :</strong>
+    <ul>
+        @foreach($errors->all() as $error)
+        <li>{{ $error }}</li>
+        @endforeach
+    </ul>
+</div>
+@endif
 
     <div class="container">
     
         <div class="row justify-content-center">
-            <h1>Modification de Categories</h1>
+            
             <div class="col-sm-8">
                 <div class="card mt-3 p-3">
                     <h1 class="text-muted">category modifier #{{$categories->id}}</h1>
-                <form method ="POST" action="/admin/{{$categories->id}}/update" enctype="multipart/form-data">
+                <form method ="POST" action="/admin/category/{{$categories->id}}/update" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
                     <div class="form-group">
-                        <label>Nom:</label>
+                        <label>Nom*:</label>
                         <input type="text" class="form-control"  value="{{old('name',$categories->name)}}" name="name"/>
                         @if($errors->has('name'))
                         <span class="text-danger">{{$errors->first('name')}}</span>
@@ -40,13 +50,13 @@
                       </div>
 
                       <div class="form-group">
-                        <label>Description:</label>
+                        <label>Description*:</label>
                         <textarea class="form-control" 
                         row="4" 
                         name="description" 
                         value="{{old('description',$categories->description)}}">
-                    </textarea>                           
-                    @if($errors->has('description'))
+                        </textarea>                          
+                        @if($errors->has('description'))
                         <span class="text-danger">{{$errors->first('description')}}</span>
                         @endif
                       
@@ -55,7 +65,7 @@
                       
 
                       <div class="form-group">
-                        <label>Image:</label>
+                        <label>Image*:</label>
                         <input type="file" name="image" class="form-control"/>
                         @if($errors->has('image'))
                         <span class="text-danger">{{$errors->first('image')}}</span>
@@ -72,4 +82,4 @@
     </div>
 </body>
 </html>
-@section
+@endsection

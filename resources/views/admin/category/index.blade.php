@@ -9,6 +9,10 @@
                     <div class="card-header">
                         <h4 class="card-title">Liste de Categories :</h4>
                     </div>
+
+                    
+                    
+                    
                   
                     <div class="text-right">
                         <div class="text-right">
@@ -38,15 +42,24 @@
                                             <td><strong>{{$category->description}}</strong></td>
                                             <td>
                                             <div class="d-flex align-items-center">
-                                                <img src="{{ asset('image/' . $category->image) }}" class="rounded-lg mr-2" width="24" />
+                                                <img src="{{ asset('assets/uploads/categories/' . $category->image) }}" class="rounded-lg mr-2" width="50" height="50" />
                                                 
                                             </div>
                                             </td>
                                             <td>
                                                 <div class="d-flex">
-                                                    <a href="{{ url('admin/category/edit/' . $category->id) }}" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
-                                                    <a href="{{ url('admin/category/destroy/' . $category->id) }}" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
-                                                    <a href=></a>
+                                                    <a href="{{route('admin.category.edit',$category->id) }}" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
+                                                    
+                                                    <form method="POST" action="{{ route('admin.category.destroy', $category->id) }}">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                    
+                                                        <button type='submit' class="btn btn-danger shadow btn-xs sharp" data-toggle="tooltip">
+                                                            <i class="fa fa-trash"></i>
+                                                        </button>
+                                                    </form>
+                                                    
+                                                    <a href={{route('admin.category.show',$category->id)}} class="btn btn-primary shadow btn-xs sharp mr-2"><i class="fa fa-eye"></i></a>
 
                                                 </div>
                                             </td>

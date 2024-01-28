@@ -47,14 +47,16 @@ Route::get('/master', function () {
 
 //Route::get('admin/category/',[Categorycontroller::class,'index'])->name('category.index');
 // routes/web.php
-Route::get('admin/category/index', 'admin\Categorycontroller@index');
+Route::get('admin/category/index', 'admin\Categorycontroller@index')->name('admin.category.index');
 
 Route::get('admin/category/create', 'admin\categoryController@create')->name('admin.category.create');
 Route::post('admin/category/store', 'admin\categoryController@store')->name('admin.category.store');
-Route::get('admin/category/{id}/edit', [CategoryController::class,'edit']);
-Route::put('admin/category/{id}/update', [CategoryController::class,'pdate']);
-Route::delete('admin/category/{id}/delete', [CategoryController::class,'destroy'])->name('admin.category.destroy');
-Route::get('admin/category/{id}/show', [CategoryController::class,'show'])->name('admin.category.show');
+Route::get('admin/category/{id}/edit','admin\categoryController@edit')->name('admin.category.edit');
+
+Route::put('admin/category/{id}/update','admin\categoryController@update')->name('admin.category.update');
+Route::delete('admin/category/{id}/destroy', 'admin\categoryController@destroy')->name('admin.category.destroy');
+Route::get('admin/category/{id}/show','admin\categoryController@show')->name('admin.category.show');
+Route::get('admin/category/search', 'admin\categoryController@search')->name('admin.category.search');
 //Route::get('categories/{id}', 'YourController@show')->name('categories.show');
 //list de plat/////////////////////////////////////
 //Route::resource('menu',MenuController::class);

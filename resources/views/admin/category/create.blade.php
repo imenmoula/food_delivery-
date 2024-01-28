@@ -32,7 +32,7 @@
     <form method="POST" action="{{route('admin.category.store')}}" enctype="multipart/form-data">
       @csrf
       <div class="form-group">
-        <label>Nom de categorie:</label>
+        <label>Nom de categorie*:</label>
         <input type="text" class="form-control"name="name"  placeholder="saisir le categorie" value="{{old('name')}}"/>
         @if($errors->has('name'))
         <span class="text-danger">{{$errors->first('name')}}</span>
@@ -41,7 +41,7 @@
       
 
       <div class="form-group">
-        <label>Description :</label>
+        <label>Description *:</label>
         <textarea class="form-control" rows="3" name="description"  value="{{old('description')}}" ></textarea>
         @if($errors->has('description'))
         <span class="text-danger">{{$errors->first('description')}}</span>
@@ -49,7 +49,7 @@
       </div>
 
       <div class="form-group">
-        <label>Image:</label>
+        <label>Image*:</label>
         <input type="file" name="image" class="form-control"/>
         @if($errors->has('image'))
         <span class="text-danger">{{$errors->first('image')}}</span>

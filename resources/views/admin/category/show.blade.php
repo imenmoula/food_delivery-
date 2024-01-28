@@ -15,10 +15,10 @@
             <div class="row justify-content-center">
                 <div class="col-sm-8 mt-4">
                     <div class="card p-4">
-                        <p>Nom: <b>{{ optional($category)->name }}</b></p>
-                        <p>Description: <b>{{ optional($category)->description }}</b></p>
-                        @if($category)
-                            <img src="/admin/{{ $category->image }}" class="rounded" width="100%" />
+                        <p>Nom: <b>{{ optional($categories)->name }}</b></p>
+                        <p>Description: <b>{{ optional($categories)->description }}</b></p>
+                        @if($categories)
+                            <img src="{{ asset('assets/uploads/categories/' . $categories->image) }}" class="rounded" width="100%" />
                         @else
                             <p>Category not found</p>
                         @endif
@@ -31,4 +31,4 @@
     
 </body>
 </html>
-@section
+@endsection
