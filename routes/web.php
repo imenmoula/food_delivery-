@@ -57,18 +57,15 @@ Route::put('admin/category/{id}/update','admin\categoryController@update')->name
 Route::delete('admin/category/{id}/destroy', 'admin\categoryController@destroy')->name('admin.category.destroy');
 Route::get('admin/category/{id}/show','admin\categoryController@show')->name('admin.category.show');
 Route::get('admin/category/search', 'admin\categoryController@search')->name('admin.category.search');
-//Route::get('categories/{id}', 'YourController@show')->name('categories.show');
-//list de plat/////////////////////////////////////
-//Route::resource('menu',MenuController::class);
-//Route::get('/',[MenuController::class,'index']);
-// routes/web.php
-
-// Route::get('/admin/plats', 'Admin\menuController@index')->name('admin.category.index');
-
-
-// Route::get('admin/plats/create',[MenuController::class,'create']);
-// Route::post('admin/plats/store',[MenuController::class,'store']);
-
+//Route plat
+Route::resource('menu',MenuController::class);
+Route::get('admin/plats/index','admin\MenuController@index')->name('admin.plats.index');
+Route::get('admin/plats/create','admin\MenuController@create')->name('admin.plats.create');
+Route::post('admin/plats/store','admin\MenuController@store')->name('admin.plats.store');
+Route::get('admin/plats/{id}/edit','admin\MenuController@edit')->name('admin.plats.edit');
+Route::put('admin/plats/{id}/update','admin\MenuController@update')->name('admin.plats.update');
+Route::delete('admin/plats/{id}/destroy', 'admin\MenuController@destroy')->name('admin.plats.destroy');
+Route::get('admin/plats/{id}/show','admin\MenuController@show')->name('admin.plats.show');
 
 
 

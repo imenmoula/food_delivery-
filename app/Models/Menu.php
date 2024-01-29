@@ -9,6 +9,7 @@ class Menu extends Model
 {
 
     use HasFactory;
+    protected $table='menus';
     protected $fillable=[
         'nom_plat',
         'description',

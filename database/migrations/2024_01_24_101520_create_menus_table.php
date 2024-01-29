@@ -16,13 +16,13 @@ class CreateMenusTable extends Migration
         Schema::create('menus', function (Blueprint $table) {
             $table->id();
             $table->string('nom_plat');
-            $table->text('description')->nullable();
+            $table->text('description');
             $table->decimal('prix',8,2);
             $table->integer('qty')->default(0);
             $table->string('image');
             $table->boolean('disponible')->default(true);
             $table->unsignedBigInteger('category_id');
-            $table->foreign('category_id')->references('id')->on('categories');
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
             $table->timestamps();
         });
     }
