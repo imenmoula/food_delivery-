@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\admin\CategoryController;
 use App\Http\Controllers\admin\MenuController;
+use App\Http\Controllers\front\FrontController;
 use App\Models\category;
 use app\Models\Menu;
 use GuzzleHttp\Promise\Create;
@@ -67,6 +68,9 @@ Route::put('admin/plats/{id}/update','admin\MenuController@update')->name('admin
 Route::delete('admin/plats/{id}/destroy', 'admin\MenuController@destroy')->name('admin.plats.destroy');
 Route::get('admin/plats/{id}/show','admin\MenuController@show')->name('admin.plats.show');
 
+////integrate front end 
+
+Route::get('/front/index','front\FrontController@index')->name('front.index');
 
 
 
