@@ -37,7 +37,7 @@
                         @foreach($c->menu as $m)
                         
                         <div class="menu-details-carousel-item">
-                            <h3>{{ $m->name }}</h3>
+                            <h3>{{ $m->nom_plat }}</h3>
                             <p>{{ $m->description }}.</p>
                             <h4 class="menu-price">{{ $m->prix }}Dt</h4>
                             <a href="#" class="btn btn-yellow">
