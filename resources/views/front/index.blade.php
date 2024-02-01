@@ -262,53 +262,92 @@
     </div>
     </div>
     </section>
-    
+    {{-- debut de categorir***************************************************************************************************************** --}}
     
     <section class="menu-section-bg menu-section-light pt-100 pb-70">
     <div class="container position-relative">
     <div class="section-title section-title-default">
+        
     <small>Menu</small>
-    <h2>Just Choose From The Best</h2>
+    
+    <h2>Il suffit de choisir parmi les meilleurs</h2>
     </div>
+    
     <div class="menu-main-carousel-area">
     <div class="menu-main-thumb-nav">
+        @foreach($categories as $c)  
+        @if($c->name=='Fast food')
     <div class="menu-main-thumb-item menu-main-thumb-item-two">
     <div class="menu-main-thumb-inner">
-    <img src="assets/images/menu-1.png" alt="menu">
-    <p>BURGER</p>
+      
+    
+        
+    <img src={{ asset('assets/uploads/categories/' . $c->image) }} alt="menu">
+    <p>{{ $c->name }}</p>
+   
     </div>
     </div>
+    @endif
+    @endforeach
+    {{-- !---/***************----------------------------------------------!} --}}
     <div class="menu-main-thumb-item menu-main-thumb-item-two">
-    <div class="menu-main-thumb-inner">
-    <img src="assets/images/menu-2.png" alt="menu">
-    <p>PIZZA</p>
+        @foreach($categories as $c)
+            @if($c->name=='Plats tunisienne')
+                <div class="menu-main-thumb-inner">
+                    <img src="{{ asset('assets/uploads/categories/' . $c->image) }} " alt="menu">
+                    <p>{{$c->name }}</p>
+                </div>
+            @endif
+        @endforeach
     </div>
-    </div>
+    {{-- ****************************************************** --}}
     <div class="menu-main-thumb-item menu-main-thumb-item-two">
+        @foreach($categories as $c)
+            @if($c->name=='healthy food')
     <div class="menu-main-thumb-inner">
-    <img src="assets/images/menu-3.png" alt="menu">
-    <p>SANDWITCH</p>
+    <img src="{{ asset('assets/uploads/categories/' . $c->image)}}" alt="menu">
+    <p>{{$c->name }}</p>
     </div>
+    @endif
+    @endforeach
     </div>
+    {{-- *************************************************** --}}
     <div class="menu-main-thumb-item menu-main-thumb-item-two">
+        @foreach($categories as $c)
+            @if($c->name=='Dessert')
     <div class="menu-main-thumb-inner">
-    <img src="assets/images/menu-4.png" alt="menu">
-    <p>SHAKE</p>
+    <img src="{{ asset('assets/uploads/categories/' . $c->image)}}" alt="menu">
+    <p>{{ $c->name }}</p>
     </div>
+    @endif
+    @endforeach
     </div>
+    {{-- *************************************************** --}}
     <div class="menu-main-thumb-item menu-main-thumb-item-two">
+        @foreach($categories as $c)
+            @if($c->name=='Boissons')
     <div class="menu-main-thumb-inner">
-    <img src="assets/images/menu-5.png" alt="menu">
-    <p>ICE-CREAME</p>
+    <img src="{{asset('assets/uploads/categories/' . $c->image)}}" alt="menu">
+    <p>{{ $c->name }}</p>
     </div>
+    @endif
+    @endforeach
     </div>
+    {{-- *************************************************** --}}
     <div class="menu-main-thumb-item menu-main-thumb-item-two">
+        @foreach($categories as $c)
+            @if($c->name=='Glace')
     <div class="menu-main-thumb-inner">
-    <img src="assets/images/menu-6.png" alt="menu">
-    <p>DESSERT</p>
+    <img src="{{asset('assets/uploads/categories/' . $c->image)}}" alt="menu">
+    <p>{{ $c->name }}</p>
+    </div>
+    @endif
+    @endforeach
     </div>
     </div>
-    </div>
+   
+    {{-- /*END categorie*******************************************************************/ ------------------------------------------------------------------}}
+    
     <div class="menu-main-details-for">
     <div class="menu-main-details-item">
     <div class="menu-details-carousel">
@@ -323,6 +362,7 @@
     <img src="assets/images/burger-slider-1.png" alt="menu">
     </div>
     </div>
+
     <div class="menu-details-carousel-item">
     <h3>Mexican Burger</h3>
     <p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>

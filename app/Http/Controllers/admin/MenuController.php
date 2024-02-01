@@ -20,6 +20,7 @@ class MenuController extends Controller
        $menu=Menu::with('category')->get();
        $categories= Category::with('menu')->get();
        
+
        return view('admin.plats.index',compact('menu','categories'));
     //    $resl['data']=Menu::all();
     //    return view('admin.plats.index',$resl);

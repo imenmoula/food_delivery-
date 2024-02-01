@@ -62,7 +62,18 @@
                                             </div>
                                             </td>
                                             <td><strong>{{$m->disponible}}</strong></td>
-                                            <td><strong>{{$m->category->name}}</strong></td>
+                                          
+                                           <td>
+                                            <strong>
+                                               
+                                                @if ($m->category)
+                                                {{$m->category->name}}
+                                            @endif                                                                       
+                                            </strong>
+                                        </td>
+
+                                         
+                                            
                                             <td>
                                                 <div class="d-flex">
                                                     <a href="{{route('admin.plats.edit', $m->id)}}" class="btn btn-primary shadow btn-xs sharp mr-2"><i class="fa fa-pencil"></i></a>

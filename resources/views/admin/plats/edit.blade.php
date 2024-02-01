@@ -59,7 +59,8 @@
       </div>
       <div class="form-group">
         <label>quantite_disponible*:</label>
-        <input type="text" class="form-control"name="qty"  placeholder="saisir votre qty" value="{{old('qty',$menu->qty)}}"/>
+        <input type="text" class="form-control"name="qty"  placeholder="saisir votre qty" value=" {{old('qty',$menu->qty)}}"/>
+
         @if($errors->has('qty'))
         <span class="text-danger">{{$errors->first('qty')}}</span>
         @endif
