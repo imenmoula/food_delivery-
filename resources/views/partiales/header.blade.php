@@ -391,9 +391,12 @@
                                 </div>
                             </div>
                             <div class="navbar-option-item navbar-option-cart">
-                                <a href="#" class="productCart"><i class="flaticon-supermarket-basket"></i></a>
-                                <span class="option-badge">2</span>
+                                <a href="#" class="productCart">
+                                    <i class="flaticon-supermarket-basket"></i>
+                                </a>
+                                <span class="option-badge">{{ $countCount }}</span>
                             </div>
+                            
                             <div class="navbar-option-item navbar-option-order">
                                 <a href="shops-grid.html" class="btn text-nowrap">
                                     Order Online <i class="flaticon-shopping-cart-black-shape"></i>

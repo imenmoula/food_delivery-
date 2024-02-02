@@ -6,6 +6,15 @@
 
             <h2>Il suffit de choisir parmi les meilleurs</h2>
         </div>
+    </div>
+    
+    <div class="container">
+        @if(session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        @endif
+
+    </div>
 
         <div class="menu-main-carousel-area">
             <div class="menu-main-thumb-nav">
@@ -54,7 +63,7 @@
                                     </div>
                                     <br>
                                     
-                                    <a href="#" class="btn btn-yellow">
+                                    <a href="{{ route('cart.store', $m->id) }}" type="button" class="btn btn-yellow">
                                         Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
                                     </a>
                                 </div>

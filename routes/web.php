@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\admin\CategoryController;
 use App\Http\Controllers\admin\MenuController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\front\FrontController;
 use App\Models\category;
 use app\Models\Menu;
@@ -73,5 +74,11 @@ Route::get('admin/plats/{id}/show','admin\MenuController@show')->name('admin.pla
 Route::get('/front/index','front\FrontController@index')->name('front.index');
 Route::get('/front/includes/{id}/detailMenu','front\FrontController@detailMenu')->name('front.includes.detailMenu');
 
+
+Route::get('cart', [CartController::class, 'cartList'])->name('cart.list');
+Route::get('add-to-cart/{id}', [CartController::class, 'addToCart'])->name('cart.store');
+Route::post('update-cart', [CartController::class, 'updateCart'])->name('cart.update');
+Route::post('remove', [CartController::class, 'removeCart'])->name('cart.remove');
+Route::post('clear', [CartController::class, 'clearAllCart'])->name('cart.clear');
 
 

@@ -119,7 +119,7 @@
                             </div>
                             <div class="product-action-info mb-20">
                                 <h4>Sizes:</h4>
-                                <ul class="product-size-list">
+                                <ul class="product-size-list" id="sizelist">
                                     <li class="active">Small</li>
                                     <li>Medium</li>
                                     <li>Large</li>
@@ -128,10 +128,12 @@
                             <div class="product-action-info mb-20">
                                 <div class="d-flex flex-wrap align-items-center
                                             product-quantity">
-                                    <button class="btn btn-icon product-quantity-item">
-                                        Add To Cart
-                                        <i class="flaticon-shopping-cart-black-shape"></i>
-                                    </button>
+                                            <a href="#"   class="btn btn-icon product-quantity-item">
+                                                Add To Cart
+                                                <i class="flaticon-shopping-cart-black-shape"></i>
+                                            </a>
+                                </div>
+                                <div id="add_to_cart_msg"></div>
                                     <div class="cart-quantity product-quantity-item">
                                         <button class="qu-btn dec">-</button>
                                         <input type="text" class="qu-input" value="{{ $menu->qty }}">

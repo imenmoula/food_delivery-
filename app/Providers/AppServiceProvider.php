@@ -2,9 +2,14 @@
 
 namespace App\Providers;
 
+use Darryldecode\Cart\Cart ;
 use Illuminate\Support\ServiceProvider;
 
 use Illuminate\Support\Facades\Schema;
+
+use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\Request;
+
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -26,5 +31,27 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Schema::defaultStringLength(191);
+
+        
+
+        View::composer('*', function ($view) {
+            // Check if the user has an existing session
+            if (!session()->has('guest_session')) {
+                // Generate a unique session ID for the guest
+                $guestSession = 'guest_' . uniqid();
+                session(['guest_session' => $guestSession]);
+            }
+        
+            // Get the guest session ID
+            $guestSession = session('guest_session');
+        
+            // Use the app helper to resolve the Cart service
+            $cart = app('cart')->session($guestSession);
+        
+            $count = $cart->getContent()->count();
+            $view->with('countCount', $count);
+        });
+
+
     }
 }
