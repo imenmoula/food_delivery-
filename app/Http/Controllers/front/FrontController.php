@@ -18,6 +18,11 @@ class FrontController extends Controller
  
         return view('front.index',compact('menu','categories'));
         
-        
+    }
+    public function detailMenu($id)
+    {
+        $menu=Menu::find($id);
+       
+        return view('front.includes.detailMenu',compact('menu')); 
     }
 }

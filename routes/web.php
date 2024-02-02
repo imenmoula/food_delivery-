@@ -71,6 +71,7 @@ Route::get('admin/plats/{id}/show','admin\MenuController@show')->name('admin.pla
 ////integrate front end 
 
 Route::get('/front/index','front\FrontController@index')->name('front.index');
+Route::get('/front/includes/{id}/detailMenu','front\FrontController@detailMenu')->name('front.includes.detailMenu');
 
 
 

@@ -44,6 +44,8 @@
 <link rel="stylesheet" href="{{asset('user/assets/css/responsive.css')}}" type="text/css" media="all" />
 
 <link rel="stylesheet" href="{{asset('user/assets/css/theme-dark.css')}}" type="text/css" media="all" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+
 <!--[if IE]>
             <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->

@@ -33,9 +33,9 @@
     <a href="index.html"><img src="assets/images/logo.png" alt="logo"></a>
     </div>
     <ul class="footer-details footer-address">
-    <li>12 Poor Street, New York, USA</li>
-    <li><span>Hotline:</span><a href="tel:001-964-565-87652">+1 964 565 87652</a></li>
-    <li><span>Email:</span><a href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#543c3138383b143235323b7a373b39"><span class="__cf_email__" data-cfemail="9af2fff6f6f5dafcfbfcf5b4f9f5f7">[email&#160;protected]</span></a></li>
+    <li>8000 NAbeul.nabeul</li>
+    <li><span>Tel:</span><a href="tel:001-964-565-87652">+1 1111111111</a></li>
+    <li><span>Email:</span>user@gmail.com<span class="__cf_email__" data-cfemail="9af2fff6f6f5dafcfbfcf5b4f9f5f7"></span></li>
     </ul>
     <div class="footer-follow">
     <p>Follow Us:</p>
@@ -52,15 +52,15 @@
     <div class="col-sm-12 col-md-6 col-lg-4 order-3">
     <div class="footer-content-list footer-content-item desk-pad-left-30">
     <div class="footer-content-title">
-    <h3>Open Hours</h3>
+    <h3>Ouvert tout les journee de semaine</h3>
     </div>
     <ul class="footer-details footer-time">
-    <li>Saturday: <span>08:00 - 23.00</span></li>
-    <li>Sunday: <span>08:00 - 23.00</span></li>
-    <li>Monday: <span>08:00 - 21.00</span></li>
-    <li>Tuesday: <span>09:00 - 23.00</span></li>
-    <li>Wednesday: <span>08:00 - 23.00</span></li>
-    <li>Thursday: <span>08:00 - 23.00</span></li>
+    <li>Lundi:<span>08:00 - 23.00</span></li>
+    <li>Mardi:<span>08:00 - 23.00</span></li>
+    <li>Mercredi:<span>08:00 - 21.00</span></li>
+    <li>Jeudi:<span>09:00 - 23.00</span></li>
+    <li>Vendredi:<span>08:00 - 23.00</span></li>
+    <li>Samedi:<span>08:00 - 23.00</span></li>
     </ul>
     </div>
     </div>
