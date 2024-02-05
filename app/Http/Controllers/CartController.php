@@ -51,7 +51,9 @@ class CartController extends Controller
    /******************************* ********************************/
 public function updateCart(Request $request)
 {
-    \Cat::update(
+    $guestSession = $request->session()->get('guest_session'); 
+    $cart = \Cart::session($guestSession) ;
+    $cart->update(
         $request->id,
         [
         'quantity'=>[
@@ -61,7 +63,7 @@ public function updateCart(Request $request)
         ]
     );
     session()->flash("success","commande modifiie vaec succes");
-    return redirect()->route('front.includes.update');
+    return redirect()->route('cart.list');
 }
 /******************************************************/
 public function removeCart(Request $request)

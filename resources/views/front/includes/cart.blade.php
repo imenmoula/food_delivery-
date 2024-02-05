@@ -113,7 +113,7 @@
             </div>
             <div class="col-sm-12 col-md-4 col-lg-3">
                 <div class="cart-update cart-info-item">
-                    <a href="#" class="btn full-width">
+                    <a href="{{ route('cart.update', $item->id) }}" class="btn full-width">
                         Modifier panier 
                     </a>
                 </div>

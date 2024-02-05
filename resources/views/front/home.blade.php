@@ -220,6 +220,20 @@
         }
     </script>
     @endif
+
+    <script>
+        // Check if there's a success flash message
+        @if(session('success'))
+            // Display SweetAlert with success message
+            document.addEventListener('DOMContentLoaded', function () {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Succès!',
+                    text: '{!! addslashes(session('success')) !!}',
+                });
+            });
+        @endif
+    </script>
 </body>
 
 <!-- Mirrored from templates.hibootstrap.com/fafo/default/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Jan 2024 11:54:59 GMT -->
