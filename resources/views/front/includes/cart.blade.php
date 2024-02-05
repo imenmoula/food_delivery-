@@ -27,10 +27,10 @@
         </div>
         <div class="container">
             <div class="header-page-content">
-                <h1>List dachat</h1>
+                <h1>Panier</h1>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{ route('front.index') }}">Home</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('front.index') }}">Acceuil </a></li>
                         <li class="breadcrumb-item active" aria-current="page">Panier</li>
                     </ol>
                 </nav>
@@ -44,6 +44,7 @@
         </div>
  @endif
 
+ @if($cart->count() > 0)
 <section class="cart-section pt-100 pb-70 bg-black">
     <div class="container">
         <div class="cart-table cart-table-dark">
@@ -53,18 +54,24 @@
                         <th></th>
                         <th></th>
                         <th>Plat</th>
-                        <th>Id</th>
                         <th>prix</th>
                         <th>Quantity</th>
                         <th>Total</th>
-                        <th>Action</th>
                         
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($cartItems as $item)
+                    @foreach($cart as $item)
                     <tr>
-                        <td class="cancel"><a href="#"><i class="flaticon-cancel"></i></a></td>
+                        <td class="cancel">
+                            <form id="deleteForm{{$item->id}}" action="{{ route('cart.remove', $item->id) }}" method="post">
+                                @csrf
+                                @method('DELETE')
+                                <button type="button" onclick="confirmDelete({{$item->id}})" style="background: black; color: white">
+                                    <i class="flaticon-cancel"></i>
+                                </button>
+                            </form>
+                        </td>
                         <td>
                             <div class="product-table-info">
                                 <div class="product-table-thumb">
@@ -73,8 +80,7 @@
                             </div>
                         </td>
                         <td class="td-product-name">{{ $item->name }}</td>
-                        <td>{{ $item->id }}</td>
-                        <td>{{ $item->price }}Dt</td>
+                        <td>{{ $item->price }}  DT</td>
                         <td>
                             <div class="cart-quantity">
                                 <button class="qu-btn dec">-</button>
@@ -83,27 +89,10 @@
                             </div>
                         </td>
                         <td class="td-total-price">
-                            {{ Cart::getTotal() }}Dt
+                            {{ $item->price *   $item->quantity }}Dt
                         </td>
                     
-                    <td>
-
-                        <div class="d-flex">
-                            <a href="{{route('cart.update', $item->id) }}" class="btn btn-primary shadow btn-xs sharp mr-2"><i class="fa fa-pencil"></i></a>
-                            
-                            <form method="POST" action="{{ route('cart.remove', $item->id) }}">
-                                @csrf
-                                @method('REMOVE')
-                            
-                                <button type='submit' class="btn btn-danger shadow btn-xs sharp mr-2" onclick="return confirm('Tu veux supprimer ce plat : {{$item->name}} ?')" data-toggle="tooltip">
-                                    <i class="fa fa-trash"></i>
-                                </button>
-                            </form>
-                            
-                            <a href={{route('cart.clear')}} class="btn btn-primary shadow btn-xs sharp mr-2"><i class="fa fa-trash"></i></a> 
-
-                        </div>
-                    </td>
+                    
                 </tr>
                     
                     @endforeach
@@ -111,7 +100,25 @@
             </table>
         </div>
 
-       
+        <div class="row justify-content-between align-items-center mt-30">
+             <div class="col-sm-12 col-md-7 col-lg-5">
+               {{-- <div class="cart-coupon cart-info-item">
+                    <form>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Enter Coupon Code">
+                            <button class="btn">Apply Coupon</button>
+                        </div>
+                    </form>
+                </div>--}}
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-3">
+                <div class="cart-update cart-info-item">
+                    <a href="#" class="btn full-width">
+                        Modifier panier 
+                    </a>
+                </div>
+            </div>
+        </div>
           
         <div class="row">
             <div class="col-sm-12 col-md-8 col-lg-6 pb-30 offset-lg-3 offset-md-2">
@@ -157,4 +164,15 @@
         </div>
     </div>
 </section>
+
+@else
+<section class="cart-section pt-100 pb-70 bg-black">
+    <div class="container">
+        <div class="section-title section-title-default">
+            <h2> Panier est vide </h2>
+        </div>
+    </div>
+</section>
+
+@endif
 @endsection

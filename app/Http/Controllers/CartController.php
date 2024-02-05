@@ -11,11 +11,8 @@ class CartController extends Controller
 
     public function cartList()
     {
-        $guestSession =session()->get('guest_session'); 
-        $cart = \Cart::session($guestSession) ;
-        $cartItems = $cart->getContent();
-        //dd($cartItems);
-        return view('front.includes.cart', compact('cartItems'));
+     
+        return view('front.includes.cart');
     }
    /**
      * Write code on Method
@@ -69,7 +66,10 @@ public function updateCart(Request $request)
 /******************************************************/
 public function removeCart(Request $request)
 {
-    \Cart::remove($request->id);
+    $guestSession = $request->session()->get('guest_session'); 
+    $cart = \Cart::session($guestSession) ;
+
+    $cart->remove($request->id);
     session()->flash('success', 'item cart  supprimer avec succes!');
     return redirect()->route('cart.list');
 

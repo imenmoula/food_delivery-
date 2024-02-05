@@ -78,7 +78,7 @@ Route::get('/front/includes/{id}/detailMenu','front\FrontController@detailMenu')
 Route::get('cart', [CartController::class, 'cartList'])->name('cart.list');
 Route::get('add-to-cart/{id}', [CartController::class, 'addToCart'])->name('cart.store');
 Route::post('update-cart', [CartController::class, 'updateCart'])->name('cart.update');
-Route::post('remove', [CartController::class, 'removeCart'])->name('cart.remove');
+Route::delete('remove/{id}', [CartController::class, 'removeCart'])->name('cart.remove');
 Route::post('clear', [CartController::class, 'clearAllCart'])->name('cart.clear');
 
 

@@ -128,7 +128,7 @@
                     <h3> {{  $cartTotal }} DT</h3>
                 </div>
                 <div class="cart-modal-button">
-                    <a href="checkout.html" class="btn full-width">Voir le panier </a>
+                    <a href="{{ route('cart.list') }}" class="btn full-width">Voir le panier </a>
                     <a href="cart.html" class="btn btn-yellow full-width">Commander</a>
                 </div>
 
@@ -199,6 +199,27 @@
     <script src="{{ asset('user/assets/js/jquery.meanmenu.min.js') }}"></script>
 
     <script src="{{ asset('user/assets/js/script.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    @if($cart->count() > 0)
+    <script>
+        function confirmDelete(itemId) {
+            Swal.fire({
+                title: 'Êtes-vous sûr(e) ?',
+                text: "Cette action ne peut pas être annulée. Vous allez supprimer ce plat ",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Oui, supprimer !'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Submit the form when confirmed
+                    document.getElementById('deleteForm' + itemId).submit();
+                }
+            });
+        }
+    </script>
+    @endif
 </body>
 
 <!-- Mirrored from templates.hibootstrap.com/fafo/default/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Jan 2024 11:54:59 GMT -->
