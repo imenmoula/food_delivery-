@@ -49,21 +49,26 @@ class CartController extends Controller
        return redirect()->back()->with('success', 'plats  ajouter avec succes!');
    }
    /******************************* ********************************/
+// public function updateCart(Request $request)
+// {
+//     $guestSession = $request->session()->get('guest_session'); 
+//     $cart = \Cart::session($guestSession) ;
+//     $cart->update(
+//         $request->id,
+//         [
+//         'quantity'=>[
+//             'relative'=>false,
+//             'value'=>$request->quantity,
+//         ],
+//         ]
+//     );
+//     session()->flash("success","commande modifiie vaec succes");
+//     return redirect()->route('cart.list');
+// }
 public function updateCart(Request $request)
 {
-    $guestSession = $request->session()->get('guest_session'); 
-    $cart = \Cart::session($guestSession) ;
-    $cart->update(
-        $request->id,
-        [
-        'quantity'=>[
-            'relative'=>false,
-            'value'=>$request->quantity,
-        ],
-        ]
-    );
-    session()->flash("success","commande modifiie vaec succes");
-    return redirect()->route('cart.list');
+    $cart=Cart::content()->where('id',$request->id);
+    return view ('cart.list')->with('cart-success','cart update');
 }
 /******************************************************/
 public function removeCart(Request $request)

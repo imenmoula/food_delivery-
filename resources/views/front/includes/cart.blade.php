@@ -61,7 +61,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($cart as $item)
+                    @foreach($cart::content() as $item)
                     <tr>
                         <td class="cancel">
                             <form id="deleteForm{{$item->id}}" action="{{ route('cart.remove', $item->id) }}" method="post">
@@ -83,9 +83,16 @@
                         <td>{{ $item->price }}  DT</td>
                         <td>
                             <div class="cart-quantity">
-                                <button class="qu-btn dec">-</button>
-                                <input type="text" class="qu-input" value="{{ $item->quantity }}">
+                                <input type="hidden " class="product_id" value="{{ $item->id }}">
+
+                                <div class="input-group-prepend decrement-btn changeQuantity" style="cursor: pointer">
+                                <button class="qu-btn dec  ">-</button>
+                                </div>
+                                <input type="number" class="qty-input" value="{{ $item->quantity }}" class="form-control quantity" class="quantity"/>
+                                <div class="input-group-prepend increment-btn changeQuantity" style="cursor: pointer">
+                                    
                                 <button class="qu-btn inc">+</button>
+                                </div>
                             </div>
                         </td>
                         <td class="td-total-price">
@@ -113,7 +120,7 @@
             </div>
             <div class="col-sm-12 col-md-4 col-lg-3">
                 <div class="cart-update cart-info-item">
-                    <a href="{{ route('cart.update', $item->id) }}" class="btn full-width">
+                    <a href="{{ route('cart.update') }}" class="btn full-width">
                         Modifier panier 
                     </a>
                 </div>
