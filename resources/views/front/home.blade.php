@@ -85,22 +85,23 @@
     @include('partiales.footer')
 
 
+
+
     <div class="cart-modal-wrapper">
         <div class="cart-modal modal-item">
             <div class="cart-modal-header">
-                <h3 class="color-white">Votre panier</h3>
+                <h3 class="color-white"></h3>
                 <div class="cart-modal-close">
                     <i class="flaticon-cancel"></i>
                 </div>
             </div>
             <div class="cart-modal-body">
-                <h2 class="color-white">Ma commande</h2>
+                <h2 class="color-white">Ma demmande </h2>
+                @foreach($cart as $items)
                 <div class="cart-modal-product">
                     <div class="cart-modal-thumb">
-                        <a href="#">
-                            @foreach($cartItems as $items)
-                                <img src="{{ asset('assets/uploads/menus/' . $items->attributes->image) }}"
-                                    alt="product">
+                        <a href="shop-details.html">
+                            <img src="{{ asset('assets/uploads/menus/' . $items->attributes->image) }}" alt="product">
                         </a>
                     </div>
                     <div class="cart-modal-content">
@@ -110,7 +111,7 @@
                                 <div class="cart-modal-quantity">
                                     <p>{{ $items->quantity }}</p>
                                     <p>x</p>
-                                    <p class="cart-quantity-price">{{ $items->price }}</p>
+                                    <p class="cart-quantity-price">{{ $items->price }} DT</p>
                                 </div>
                             </div>
                             <div class="cart-modal-action-item">
@@ -121,14 +122,14 @@
                         </div>
                     </div>
                 </div>
-                
+                @endforeach
                 <div class="cart-modal-total">
                     <p>Total</p>
-                    <h3></h3>
+                    <h3> {{  $cartTotal }} DT</h3>
                 </div>
                 <div class="cart-modal-button">
-                    <a href="#" class="btn full-width">Passer à la caisse</a>
-                    <a href="{{ route('cart.list') }}" class="btn btn-yellow full-width">Voir Panier d'achat</a>
+                    <a href="checkout.html" class="btn full-width">Voir le panier </a>
+                    <a href="cart.html" class="btn btn-yellow full-width">Commander</a>
                 </div>
 
 
@@ -136,7 +137,7 @@
         </div>
     </div>
 
-@endforeach
+   
     <div class="scroll-top" id="scrolltop">
         <div class="scroll-top-inner">
             <span><i class="flaticon-up-arrow"></i></span>

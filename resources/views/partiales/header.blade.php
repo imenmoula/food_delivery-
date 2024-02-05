@@ -394,7 +394,7 @@
                                 <a href="#" class="productCart">
                                     <i class="flaticon-supermarket-basket"></i>
                                 </a>
-                                <span class="option-badge">{{ $countCount }}</span>
+                                <span class="option-badge">{{ $cart->count() }}</span>
                             </div>
                             
                             <div class="navbar-option-item navbar-option-order">

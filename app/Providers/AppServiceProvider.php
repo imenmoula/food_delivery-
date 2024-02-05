@@ -46,10 +46,11 @@ class AppServiceProvider extends ServiceProvider
             $guestSession = session('guest_session');
         
             // Use the app helper to resolve the Cart service
-            $cart = app('cart')->session($guestSession);
         
-            $count = $cart->getContent()->count();
-            $view->with('countCount', $count);
+            $cartTotal = \Cart::session($guestSession)->getTotal();
+            $cart = \Cart::session($guestSession)->getContent(); 
+
+            $view->with(['cart' => $cart, 'cartTotal' => $cartTotal]);
         });
 
 
