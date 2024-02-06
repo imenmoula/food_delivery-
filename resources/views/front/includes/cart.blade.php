@@ -61,7 +61,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($cart::content() as $item)
+                    @foreach($cart as $item)
                     <tr>
                         <td class="cancel">
                             <form id="deleteForm{{$item->id}}" action="{{ route('cart.remove', $item->id) }}" method="post">
@@ -130,45 +130,29 @@
         <div class="row">
             <div class="col-sm-12 col-md-8 col-lg-6 pb-30 offset-lg-3 offset-md-2">
                 <div class="cart-details mt-20">
-                    <h3 class="cart-details-title color-white">Cart Totals</h3>
+                    <h3 class="cart-details-title color-white">Panier Totals</h3>
                     <div class="cart-total-box">
+                        @foreach($cart as $item)
                         <div class="cart-total-item">
-                            <h4>Sub Total</h4>
-                            <p>$ 45</p>
+                            <h4>{{ $item->quantity }} x {{ $item->name }}</h4>
+                            <p>{{ $item->price }} Dt</p>
                         </div>
-                        <div class="cart-total-item">
-                            <h4>Shipping</h4>
-                            <div class="cart-total-checkarea">
-                                <div class="cart-checkarea-item">
-                                    <div class="cart-check-box">
-                                        <input type="radio" name="ship" id="cart1">
-                                        <label for="cart1">Flat Rate</label>
-                                    </div>
-                                </div>
-                                <div class="cart-checkarea-item">
-                                    <div class="cart-check-box">
-                                        <input type="radio" name="ship" id="cart2">
-                                        <label for="cart2">Express Delivery</label>
-                                    </div>
-                                    <p>$ 15</p>
-                                </div>
-                                <div class="cart-checkarea-item">
-                                    <div class="cart-check-box">
-                                        <input type="radio" name="ship" id="cart3">
-                                        <label for="cart3">In-Stock Pick up</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                         <div class="cart-total-item cart-total-bold">
                             <h4 class="color-white">Total</h4>
-                            <p>$ 45</p>
+                            @php
+                                $total = 0;
+                                foreach ($cart as $item) {
+                                    $total += $item->price * $item->quantity;
+                                }
+                            @endphp
+                            <p>{{ $total }} Dt</p> 
                         </div>
                     </div>
-                    <a href="checkout.html" class="btn">Proceed To Checkout</a>
-                </div>
+                    <a href="{{ route('front.includes.checkout') }}" class="btn">payment</a>                </div>
             </div>
         </div>
+        
     </div>
 </section>
 

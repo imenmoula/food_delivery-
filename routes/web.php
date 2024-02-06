@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\admin\CategoryController;
 use App\Http\Controllers\admin\MenuController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\checkoutController;
 use App\Http\Controllers\front\FrontController;
 use App\Models\category;
 use app\Models\Menu;
@@ -81,4 +82,8 @@ Route::get('add-to-cart/{id}', [CartController::class, 'addToCart'])->name('cart
 Route::delete('remove/{id}', [CartController::class, 'removeCart'])->name('cart.remove');
 Route::post('clear', [CartController::class, 'clearAllCart'])->name('cart.clear');
 Route::patch('update-cart', [CartController::class, 'updateCart'])->name('cart.update');
+/////checkout
 
+
+Route::get('/front/checkout', [checkoutController::class, 'checkout'])->name('front.includes.checkout');
+Route::post('/front/checkout/store', [checkoutController::class, 'store'])->name('front.store.checkout');

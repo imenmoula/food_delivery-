@@ -129,7 +129,7 @@
                 </div>
                 <div class="cart-modal-button">
                     <a href="{{ route('cart.list') }}" class="btn full-width">Voir le panier </a>
-                    <a href="cart.html" class="btn btn-yellow full-width">Commander</a>
+                    <a href="{{ route('front.includes.checkout')  }}" class="btn btn-yellow full-width">Commander</a>
                 </div>
 
 
@@ -230,6 +230,17 @@
                     icon: 'success',
                     title: 'Succès!',
                     text: '{!! addslashes(session('success')) !!}',
+                });
+            });
+        @endif
+
+        @if(session('error'))
+            // Display SweetAlert with success message
+            document.addEventListener('DOMContentLoaded', function () {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error!',
+                    text: '{!! addslashes(session('error')) !!}',
                 });
             });
         @endif

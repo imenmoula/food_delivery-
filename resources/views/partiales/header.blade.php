@@ -56,7 +56,8 @@
         <div class="navbar-area navbar-area-two">
 
             <div class="mobile-nav">
-                <a href="index.html" class="mobile-brand">
+                <a href="{{ route('front.index') }}" class="mobile-brand">
+                  
                     <img src="{{ asset('user/assets/images/logo-black.png') }}" alt="logo"
                         class="blue-logo logo1">
                     <img src="{{ asset('user/assets/images/logo.png') }}" alt="logo"
@@ -199,78 +200,29 @@
             <div class="main-nav">
                 <div class="container">
                     <nav class="navbar navbar-expand-md navbar-light">
-                        <a class="navbar-brand" href="index.html">
-                            <img src="assets/images/logo-black.png" alt="logo" class="logo logo1">
-                            <img src="assets/images/logo.png" alt="logo" class="logo2">
+                        <a class="navbar-brand" href="{{ route('front.index') }}">
+                            <img src="{{ asset('user/assets/images/logo-black.png') }}" alt="logo" class="logo logo1">
+                            <img src="{{ asset('user/assets/images/logo.png') }}" alt="logo" class="logo2">
                         </a>
 
                         <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                             <ul class="navbar-nav ms-auto">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link dropdown-toggle active">HOME</a>
-                                    {{-- <ul class="dropdown-menu">
-                                        {{-- <li class="nav-item">
-                                            <a href="index-2.html" class="nav-link active">Home 2 (With Revolution)</a>
-                                        </li> 
-                                    </ul---}}
+                                    <a href="{{ route('front.index') }}" class="nav-link">Acceuil</a>
+                                    
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="menu.html" class="nav-link">MENU</a>
+                                    <a href="#" class="nav-link">Notre MENU</a>
                                 </li>
 
+                              
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link dropdown-toggle">PAGES</a>
-                                    <ul class="dropdown-menu">
-                                        <li class="nav-item">
-                                            <a href="#" class="nav-link">About Us</a>
-                                        </li>
-                                        
-                                        
-                                       
-                                        
-                                        <li class="nav-item">
-                                            <a href="#" class="nav-link dropdown-toggle">Reservation</a>
-                        
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="#" class="nav-link dropdown-toggle">Shop</a>
-                                            <ul class="dropdown-menu">
-                                                <li class="nav-item">
-                                                    <a href="shops-grid.html" class="nav-link">Shop Grid</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a href="shop-details.html" class="nav-link">Shop Details</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a href="cart.html" class="nav-link">Cart</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a href="wishlist.html" class="nav-link">Wishlist</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a href="checkout.html" class="nav-link">Checkout</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a href="tracking-order.html" class="nav-link">Tracking Order</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a href="my-account.html" class="nav-link">My Account</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                       
-                                      
-                                       
-                                        
-                                    </ul>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link dropdown-toggle">BLOG</a>
+                                    <a href="#" class="nav-link">A propos</a>
                                     
                                 </li>
                                 <li class="nav-item">
-                                    <a href="contact-us.html" class="nav-link">CONTACT US</a>
+                                    <a href="#" class="nav-link">CONTACT</a>
                                 </li>
                             </ul>
                         </div>
@@ -399,7 +351,7 @@
                             
                             <div class="navbar-option-item navbar-option-order">
                                 <a href="shops-grid.html" class="btn text-nowrap">
-                                    Order Online <i class="flaticon-shopping-cart-black-shape"></i>
+                                    Réservation <i class="flaticon-shopping-cart-black-shape"></i>
                                 </a>
                             </div>
                         </div>
