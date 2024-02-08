@@ -24,4 +24,10 @@ class Menu extends Model
     {
         return $this->belongsTo(category::class);
     }
+    public function orderLine()
+    {
+        return $this->hasMany(orderLine::class);
+    }
+   
+
 }

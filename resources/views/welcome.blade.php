@@ -10,8 +10,8 @@
         <h1>Welcome to Your App</h1>
 
         @auth
-        {{-- //{{auth::user()->id}}  --}}
-            <p>You are logged in. <a href="{{ url('/master') }}">Go to Dashboard</a></p>
+        {{-- {{auth::user()->id}}  --}}
+            <p>You are logged in. <a href="{{ url('/home') }}">Go to Dashboard</a></p>
         @else
             <p>You are not logged in. <a href="{{ route('login') }}">Login</a> or <a href="{{ route('register') }}">Register</a></p>
         @endauth

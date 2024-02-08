@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreCheckoutRequest;
+//use App\Http\Requests\StoreCheckoutRequest;
 use Illuminate\Http\Request;
 use App\Models\Menu;
 use App\Models\order;
@@ -24,12 +24,12 @@ class checkoutController extends Controller
     }
 
 
-    public function store(StoreCheckoutRequest $request)
+    public function store(Request $request)
     {
 
         try{
 
-       
+           // $data = $request->validated();
         $guestSession = session('guest_session');
 
        $cart = \Cart::session($guestSession)->getContent(); 
@@ -37,7 +37,17 @@ class checkoutController extends Controller
        if($cart->count() == 0){
           return redirect()->back()->with('error', 'Votre Panier est vide ');
        }
-
+//validation 
+$request->validate([
+    'fname' => 'required|string|max:255',
+    'lname' => 'required|string|max:255',
+    'email' => 'required|email|max:255',
+    'phone' => 'required|string|max:20',
+    'address' => 'required|string|max:255',
+    'rue' => 'required|string|max:255',
+    'message' => 'nullable|string',
+]);
+////////////////
        $order = order::create([
            'fname' => $request->fname,
            'lname' => $request->lname,

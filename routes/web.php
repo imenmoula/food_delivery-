@@ -6,6 +6,8 @@ use App\Http\Controllers\admin\MenuController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\checkoutController;
 use App\Http\Controllers\front\FrontController;
+use App\Http\Controllers\Admin\OrderController;
+use App\Http\Controllers\HomeController;
 use App\Models\category;
 use app\Models\Menu;
 use GuzzleHttp\Promise\Create;
@@ -27,11 +29,16 @@ Route::get('/', function () {
 Route::get('/food','\App\Http\Controllers\testcontrolleur@food',);
 Route::get('/bar','\App\Http\Controllers\testcontrolleur@bar',);
 
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth'])->name('dashboard');
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
 
-// require __DIR__.'/auth.php';
+require __DIR__.'/auth.php';
+
+/*******Navigation ************************/ 
+Route::get('/home',[HomeController::class,'index'])
+->middleware(['auth'])->name('home');
+
 
 
 
@@ -41,9 +48,9 @@ Route::get('/bar','\App\Http\Controllers\testcontrolleur@bar',);
 //      })->middleware(['auth'])->name('master');
 //      require_once __DIR__.'/auth.php';
 
-Route::get('/master', function () {
-    return view('master');
-})->middleware(['auth'])->name('master');
+// Route::get('/welcome', function () {
+//     return view('welcome');
+// })->middleware(['auth'])->name('welcome');
 
 //list categorie//////////////////////////////////******************************************************************* */
 //Route::resource('category', 'categoryController');
@@ -83,7 +90,13 @@ Route::delete('remove/{id}', [CartController::class, 'removeCart'])->name('cart.
 Route::post('clear', [CartController::class, 'clearAllCart'])->name('cart.clear');
 Route::patch('update-cart', [CartController::class, 'updateCart'])->name('cart.update');
 /////checkout
-
-
 Route::get('/front/checkout', [checkoutController::class, 'checkout'])->name('front.includes.checkout');
 Route::post('/front/checkout/store', [checkoutController::class, 'store'])->name('front.store.checkout');
+////admin////list commande*************************************************************//
+Route::get('admin/order/index', 'admin\OrderController@index')->name('admin.order.index');
+Route::get('/admin/order/{id}/show', 'admin\OrderController@show')->name('admin.order.show');
+
+Route::delete('/admin/order/{id}', 'admin\OrderController@destroy')->name('admin.order.destroy');
+Route::get('/admin/order/{id}/edit', 'admin\OrderController@edit')->name('admin.order.edit');
+Route::put('/admin/order/{id}', 'admin\OrderController@update')->name('admin.order.update');
+

@@ -21,6 +21,10 @@ class orderLine extends Model
    {
        return $this->belongsTo(order::class);
    }
+   public function menu()
+   {
+       return $this->belongsTo(menu::class);
+   }
 
    
    

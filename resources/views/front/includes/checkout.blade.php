@@ -32,7 +32,7 @@
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="{{ route('front.index') }}">Home</a></li>
                         <li class="breadcrumb-item"><a href="#"></a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Checkout</li>
+                        <li class="breadcrumb-item active" aria-current="page">Passe a la paiment</li>
                     </ol>
                 </nav>
             </div>
@@ -47,7 +47,7 @@
             <div class="col-sm-12 col-md-7 col-lg-8 pb-30">
                 <div class="checkout-item">
                     <div class="sub-section-title">
-                        <h3 class="color-white">Billing Details</h3>
+                        <h3 class="color-white">Détails de facturation</h3>
                     </div>
                     <div class="checkout-form">
                         <form method="post" action="{{ route('front.store.checkout') }}"> 
@@ -113,7 +113,7 @@
                                 </div>
                             </div>
                             
-                            <button class="btn full-width">Commender</button>
+                            <button class="btn full-width">Commander</button>
                         </form>
  
                     </div>
@@ -127,28 +127,22 @@
             <div class="col-sm-12 col-md-5 col-lg-4 pb-30">
                 <div class="checkout-item">
                     <div class="checkout-details cart-details mb-30">
-                        <h3 class="cart-details-title color-white">Cart Totals</h3>
+                        <h3 class="cart-details-title color-white"> Total du panier</h3>
                         <div class="cart-total-box">
                             <div class="cart-total-item pt-0">
-                                <h4 class="color-main">Crispy Chicken Burger</h4>
+                                <h4 class="color-main">SQDVFGB</h4>
                                 <p>$ 9.00</p>
                             </div>
-                            <div class="cart-total-item">
-                                <h4 class="color-main">Red Sauce Pizza</h4>
-                                <p>$ 8.00</p>
-                            </div>
-                            <div class="cart-total-item">
-                                <h4>Sub Total</h4>
-                                <p>$ 45</p>
-                            </div>
+                            
                             <div class="cart-total-item cart-total-bold">
                                 <h4 class="color-white">Total</h4>
                                 <p>$ 45</p>
                             </div>
                         </div>
                     </div>
+{{--** ************************************************************************************ --}}
                     <div class="checkout-payment-area">
-                        <h3 class="color-white cart-details-title">Payment Method</h3>
+                        <h3 class="color-white cart-details-title">Methods de payement</h3>
                         <div class="checkout-form">
                             <form>
                                 <div class="row">
