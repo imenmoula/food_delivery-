@@ -18,7 +18,7 @@
                             data-y="['top','top','top','top']" data-voffset="['20','380','400','320']" data-type="image"
                             data-responsive_offset="on"
                             data-frames="[{&quot;from&quot;:&quot;y:-50px;opacity:0;&quot;,&quot;speed&quot;:1500,&quot;to&quot;:&quot;o:1;&quot;,&quot;delay&quot;:700,&quot;ease&quot;:&quot;Power3.easeOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;nothing&quot;}]"
-                            style="z-index: 8;border-width:0px;"><img src="assets/images/header-2-carousel-1.png" alt
+                            style="z-index: 8;border-width:0px;"><img src="{{ asset('image/ramdan.jpg') }}" alt
                                 data-ww="['322px','322px','300px','270px']" data-hh="['620px','620px','560px','504px']"
                                 width="322" height="620" data-no-retina> </div>
 
@@ -30,7 +30,7 @@
                             data-responsive_offset="on"
                             data-frames="[{&quot;from&quot;:&quot;y:50px;opacity:0;&quot;,&quot;speed&quot;:1500,&quot;to&quot;:&quot;o:1;&quot;,&quot;delay&quot;:500,&quot;ease&quot;:&quot;Power3.easeOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;nothing&quot;}]"
                             data-textAlign="['left','center','center','center']" data-fontweight="400"
-                            style="z-index: 5; white-space: nowrap;">Endless Combo For<br> Ultimate Satisfaction</div>
+                            style="z-index: 5; white-space: nowrap;">Spécial Ramadan<br>remise sur <br>les plats tunisiens</div>
 
                         <div class="tp-caption color-white LandingPage-SubTitle tp-resizeme header-2-caption-shape"
                             id="slide-1-layer-3" data-x="['right','center','center','center']"
@@ -41,8 +41,12 @@
                             data-frames="[{&quot;from&quot;:&quot;x:-50px;opacity:0;&quot;,&quot;speed&quot;:1500,&quot;to&quot;:&quot;o:1;&quot;,&quot;delay&quot;:700,&quot;ease&quot;:&quot;Power3.easeOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;nothing&quot;}]"
                             data-textAlign="['left','left','center','center']"
                             style="z-index: 7;white-space: normal;font-style:normal;">
+                            
+
                             <div class="header-content-subtitle">
+                                
                                 <p class="header-subtitle-name">
+                                    
                                     Double Chicken <span>+</span> Chicken <span>+</span> Bacon <span>=</span>
                                 </p>
                                 <p class="header-subtitle-price">
@@ -63,7 +67,7 @@
                             data-y="['top','top','top','top']" data-voffset="['200','30','30','30']" data-type="image"
                             data-responsive_offset="on"
                             data-frames="[{&quot;from&quot;:&quot;x:0;y:0;z:0;rX:0;rY:0;rZ:0;sX:0.75;sY:0.75;skX:0;skY:0;opacity:0;&quot;,&quot;speed&quot;:1500,&quot;to&quot;:&quot;o:1;&quot;,&quot;delay&quot;:1000,&quot;ease&quot;:&quot;Power3.easeOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;nothing&quot;}]"
-                            style="z-index: 8;border-width:0px;"><img src="assets/images/header-shape-7.png" alt
+                            style="z-index: 8;border-width:0px;"><img src="{{asset('user/assets/images/header-shape-1.png')}}" alt
                                 data-ww="['42px','42px','42px','42px']" data-hh="['43px','43px','43px','43px']"
                                 width="42" height="43" data-no-retina> </div>
 
@@ -71,7 +75,7 @@
                             data-x="['right','right','right','right']" data-y="['top','top','top','top']"
                             data-voffset="['-45','-45','-45','-75']" data-type="image" data-responsive_offset="on"
                             data-frames="[{&quot;from&quot;:&quot;x:50px;opacity:0;&quot;,&quot;speed&quot;:1500,&quot;to&quot;:&quot;o:1;&quot;,&quot;delay&quot;:700,&quot;ease&quot;:&quot;Power3.easeOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;nothing&quot;}]"
-                            style="z-index: 8;border-width:0px;"><img src="assets/images/header-shape-3.png" alt
+                            style="z-index: 8;border-width:0px;"><img src="{{asset('user/assets/images/header-shape-3.png')}}" alt
                                 data-ww="['110px','110px','110px','110px']" data-hh="['143px','143px','143px','143px']"
                                 width="110" height="143" data-no-retina> </div>
 
@@ -79,7 +83,7 @@
                             data-x="['right','right','right','right']" data-y="['bottom','bottom','bottom','bottom']"
                             data-voffset="['200','30','30','30']" data-type="image" data-responsive_offset="on"
                             data-frames="[{&quot;from&quot;:&quot;x:50px;rZ: 120deg;opacity:0;&quot;,&quot;speed&quot;:1500,&quot;to&quot;:&quot;o:1;&quot;,&quot;delay&quot;:700,&quot;ease&quot;:&quot;Power3.easeOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;nothing&quot;}]"
-                            style="z-index: 8;border-width:0px;"><img src="assets/images/header-shape-1.png" alt
+                            style="z-index: 8;border-width:0px;"><img src="{{ asset('user/assets/images/header-shape-1.png') }}" alt
                                 data-ww="['42px','42px','42px','42px']" data-hh="['43px','43px','43px','43px']"
                                 width="42" height="43" data-no-retina> </div>
 
@@ -87,7 +91,7 @@
                             data-x="['right','right','right','right']" data-y="['bottom','bottom','bottom','bottom']"
                             data-voffset="['45','45','45','75']" data-type="image" data-responsive_offset="on"
                             data-frames="[{&quot;from&quot;:&quot;y:-50px;opacity:0;&quot;,&quot;speed&quot;:1500,&quot;to&quot;:&quot;o:1;&quot;,&quot;delay&quot;:700,&quot;ease&quot;:&quot;Power3.easeOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;nothing&quot;}]"
-                            style="z-index: 8;border-width:0px;"><img src="assets/images/header-shape-6.png" alt
+                            style="z-index: 8;border-width:0px;"><img src="{{ asset('user/assets/images/header-shape-6.png') }}" alt
                                 data-ww="['173px','173px','173px','173px']" data-hh="['192px','192px','192px','192px']"
                                 width="110" height="143" data-no-retina> </div>
                     </li>
@@ -101,7 +105,7 @@
                             data-y="['top','top','top','top']" data-voffset="['150','480','450','400']"
                             data-type="image" data-responsive_offset="on"
                             data-frames="[{&quot;from&quot;:&quot;y:-50px;opacity:0;&quot;,&quot;speed&quot;:1500,&quot;to&quot;:&quot;o:1;&quot;,&quot;delay&quot;:700,&quot;ease&quot;:&quot;Power3.easeOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;nothing&quot;}]"
-                            style="z-index: 8;border-width:0px;"><img src="assets/images/header-2-carousel-2.png" alt
+                            style="z-index: 8;border-width:0px;"><img src="{{ asset('user/assets/images/header-2-carousel-2.png') }}" alt
                                 data-ww="['370px','500px','500px','500px']" data-hh="['350px','451px','451px','451px']"
                                 width="370" height="350" data-no-retina> </div>
 
@@ -113,7 +117,7 @@
                             data-responsive_offset="on"
                             data-frames="[{&quot;from&quot;:&quot;y:50px;opacity:0;&quot;,&quot;speed&quot;:1500,&quot;to&quot;:&quot;o:1;&quot;,&quot;delay&quot;:500,&quot;ease&quot;:&quot;Power3.easeOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;nothing&quot;}]"
                             data-textAlign="['left','center','center','center']" data-fontweight="400"
-                            style="z-index: 5; white-space: nowrap;">Enjoy Every Bite<br> By Your Heart</div>
+                            style="z-index: 5; white-space: nowrap;">S'amuser avec notre<br> delicious food</div>
 
                         <div class="tp-caption LandingPage-SubTitle tp-resizeme header-2-caption-shape"
                             id="slide-2-layer-3" data-x="['right','center','center','center']"
@@ -145,7 +149,7 @@
                             data-x="['left','left','left','left']" data-y="['top','top','top','top']"
                             data-voffset="['200','30','30','30']" data-type="image" data-responsive_offset="on"
                             data-frames="[{&quot;from&quot;:&quot;x:0;y:0;z:0;rX:0;rY:0;rZ:0;sX:0.75;sY:0.75;skX:0;skY:0;opacity:0;&quot;,&quot;speed&quot;:1500,&quot;to&quot;:&quot;o:1;&quot;,&quot;delay&quot;:1000,&quot;ease&quot;:&quot;Power3.easeOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;nothing&quot;}]"
-                            style="z-index: 8;border-width:0px;"><img src="assets/images/header-shape-7.png" alt
+                            style="z-index: 8;border-width:0px;"><img src="{{ asset('user/assets/images/header-shape-7.png') }}" alt
                                 data-ww="['42px','42px','42px','42px']" data-hh="['43px','43px','43px','43px']"
                                 width="42" height="43" data-no-retina> </div>
 
@@ -153,7 +157,7 @@
                             data-x="['right','right','right','right']" data-y="['top','top','top','top']"
                             data-voffset="['-45','-45','-45','-75']" data-type="image" data-responsive_offset="on"
                             data-frames="[{&quot;from&quot;:&quot;x:50px;opacity:0;&quot;,&quot;speed&quot;:1500,&quot;to&quot;:&quot;o:1;&quot;,&quot;delay&quot;:700,&quot;ease&quot;:&quot;Power3.easeOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;nothing&quot;}]"
-                            style="z-index: 8;border-width:0px;"><img src="assets/images/header-shape-3.png" alt
+                            style="z-index: 8;border-width:0px;"><img src="{{ asset('user/assets/images/header-shape-3.png') }}" alt
                                 data-ww="['110px','110px','110px','110px']" data-hh="['143px','143px','143px','143px']"
                                 width="110" height="143" data-no-retina> </div>
 
@@ -161,7 +165,7 @@
                             data-x="['right','right','right','right']" data-y="['bottom','bottom','bottom','bottom']"
                             data-voffset="['200','30','30','30']" data-type="image" data-responsive_offset="on"
                             data-frames="[{&quot;from&quot;:&quot;x:50px;rZ: 120deg;opacity:0;&quot;,&quot;speed&quot;:1500,&quot;to&quot;:&quot;o:1;&quot;,&quot;delay&quot;:700,&quot;ease&quot;:&quot;Power3.easeOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;nothing&quot;}]"
-                            style="z-index: 8;border-width:0px;"><img src="assets/images/header-shape-1.png" alt
+                            style="z-index: 8;border-width:0px;"><img src="{{ asset('user/assets/images/header-shape-1.png') }}" alt
                                 data-ww="['42px','42px','42px','42px']" data-hh="['43px','43px','43px','43px']"
                                 width="42" height="43" data-no-retina> </div>
 
@@ -169,7 +173,7 @@
                             data-x="['right','right','right','right']" data-y="['bottom','bottom','bottom','bottom']"
                             data-voffset="['45','45','45','75']" data-type="image" data-responsive_offset="on"
                             data-frames="[{&quot;from&quot;:&quot;y:-50px;opacity:0;&quot;,&quot;speed&quot;:1500,&quot;to&quot;:&quot;o:1;&quot;,&quot;delay&quot;:700,&quot;ease&quot;:&quot;Power3.easeOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;to&quot;:&quot;opacity:0;&quot;,&quot;ease&quot;:&quot;nothing&quot;}]"
-                            style="z-index: 8;border-width:0px;"><img src="assets/images/header-shape-6.png" alt
+                            style="z-index: 8;border-width:0px;"><img src="{{  asset('user/assets/images/header-shape-6.png')}}" alt
                                 data-ww="['173px','173px','173px','173px']" data-hh="['192px','192px','192px','192px']"
                                 width="110" height="143" data-no-retina> </div>
                     </li>
@@ -182,149 +186,93 @@
 
 
 
-
+{{-- petit-dejeuner-------------------------------------------------------------------------------------------------- --}}
 
 <section class="combo-section pt-100 pb-70 bg-off-white">
     <div class="container">
         <div class="section-title section-title-default">
-            <small>Combos</small>
-            <h2>Our Best Combos To Choose</h2>
+            <small>Petit-Déjeuner</small>
+            <h2>Nos meilleurs articles à choisir pour le petit-déjeuner</h2>
         </div>
         <div class="row">
-            <div class="col-sm-12 col-lg-6 wow animate__slideInUp" data-wow-duration="1s" data-wow-delay="0.1s">
-                <div class="combo-box-two">
-                    <div class="combo-two-pos-title">
-                        Combo1
-                    </div>
-                    <div class="combo-image-two">
-                        <img src="assets/images/combo-2-1.png" alt="combo">
-                    </div>
-                    <div class="combo-two-text">
-                        <h3>1 Bugers, 2 Drinks, Nachos With French Fries</h3>
-                        <a href="shop-details.html" class="btn btn-border btn-small">
-                            Order Now <i class="flaticon-shopping-cart-black-shape"></i>
-                        </a>
-                    </div>
-                    <div class="combo-offer-shape combo-offer-shape-red">
-                        <div class="combo-shape-inner">
-                            <small>Only At</small>
-                            <p>$10.91</p>
+            @foreach($categories as $c)
+                @if($c->name=='Petit déjeuners')
+                    @foreach($c->menu as $m)
+                        <div class="col-sm-12 col-lg-6 wow animate__slideInUp" data-wow-duration="1s" data-wow-delay="0.1s">
+                            <div class="combo-box-two">
+                                <div class="combo-two-pos-title"></div>
+                                <div class="combo-image-two">
+                                    <img src="{{ asset('assets/uploads/menus/' . $m->image) }}" alt="combo">
+                                </div>
+                                <div class="combo-two-text">
+                                    <h3>{{ $m->description }}</h3>
+                                    <a href="shop-details.html" class="btn btn-border btn-small">
+                                        Commander maintenant <i class="flaticon-shopping-cart-black-shape"></i>
+                                    </a>
+                                </div>
+                                <div class="combo-offer-shape combo-offer-shape-red">
+                                    <div class="combo-shape-inner">
+                                        <small>Seulement à</small>
+                                        <p>{{ $m->prix }}dt</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-lg-6 wow animate__slideInUp" data-wow-duration="1s" data-wow-delay="0.1s">
-                <div class="combo-box-two">
-                    <div class="combo-two-pos-title">
-                        Combo2
-                    </div>
-                    <div class="combo-image-two">
-                        <img src="assets/images/combo-2-2.png" alt="combo">
-                    </div>
-                    <div class="combo-two-text">
-                        <h3>2 Hotdogs, 2 Drinks, Nachos With French Fries</h3>
-                        <a href="shop-details.html" class="btn btn-border btn-small">
-                            Order Now <i class="flaticon-shopping-cart-black-shape"></i>
-                        </a>
-                    </div>
-                    <div class="combo-offer-shape combo-offer-shape-yellow">
-                        <div class="combo-shape-inner">
-                            <small>Only At</small>
-                            <p>$8.65</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-lg-6 wow animate__slideInUp" data-wow-duration="1.5s" data-wow-delay="0.1s">
-                <div class="combo-box-two">
-                    <div class="combo-two-pos-title">
-                        Combo3
-                    </div>
-                    <div class="combo-image-two">
-                        <img src="assets/images/combo-2-3.png" alt="combo">
-                    </div>
-                    <div class="combo-two-text">
-                        <h3>2 Burgers, 2 Drinks, Nachos With French Fries</h3>
-                        <a href="shop-details.html" class="btn btn-border btn-small">
-                            Order Now <i class="flaticon-shopping-cart-black-shape"></i>
-                        </a>
-                    </div>
-                    <div class="combo-offer-shape combo-offer-shape-red">
-                        <div class="combo-shape-inner">
-                            <small>Only At</small>
-                            <p>$12.45</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-lg-6 wow animate__slideInUp" data-wow-duration="1.5s" data-wow-delay="0.1s">
-                <div class="combo-box-two">
-                    <div class="combo-two-pos-title">
-                        Combo4
-                    </div>
-                    <div class="combo-image-two">
-                        <img src="assets/images/combo-2-4.png" alt="combo">
-                    </div>
-                    <div class="combo-two-text">
-                        <h3>2 Pizzas, 1 Sauce, Nachos With French Fries</h3>
-                        <a href="shop-details.html" class="btn btn-border btn-small">
-                            Order Now <i class="flaticon-shopping-cart-black-shape"></i>
-                        </a>
-                    </div>
-                    <div class="combo-offer-shape combo-offer-shape-red">
-                        <div class="combo-shape-inner">
-                            <small>Only At</small>
-                            <p>$9.15</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                    @endforeach
+                @endif
+            @endforeach
         </div>
     </div>
 </section>
 
 
+
+
 <section class="service-section pt-100 pb-70 bg-main bg-overlay-transparent">
     <div class="container">
         <div class="section-title">
-            <h2 class="color-white">We Offer 3 Kinds Of Services</h2>
+            <h2 class="color-white">Nous proposons 3 types de services</h2>
         </div>
-        <div class="row">
-            <div class="col-sm-12 col-md-6 col-lg-4 pb-30">
+        <div class="row d-flex flex-row">
+            <div class="col-sm-12 col-md-4 pb-30">
                 <div class="service-item">
                     <div class="service-image">
-                        <img src="assets/images/service-1.jpg" alt="service">
+                        <img src="{{  asset('user/assets/images/service-1.jpg') }}" alt="service">
                     </div>
                     <div class="service-content">
-                        <h3>1. Dine In</h3>
-                        <p>Choose Your Best Combos From The Thousands Of Exciting Items.</p>
+                        <h3>1. Chez Happyness Food, les plats arrivent sur place rapidement</h3>
+                        <p>Découvrez notre large sélection de délices chez Happyness Food </p>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 pb-30">
+            <div class="col-sm-12 col-md-4 pb-30">
                 <div class="service-item">
                     <div class="service-image">
-                        <img src="assets/images/service-2.jpg" alt="service">
+                        <img src="{{ asset('image/reservation.jpg') }}"   alt="service">
                     </div>
                     <div class="service-content">
-                        <h3>2. Take Away</h3>
-                        <p>Choose Your Best Combos From The Thousands Of Exciting Items.</p>
+                        <h3>2. Reservation a domicile</h3>
+                        <p>Réservez facilement votre table en ligne dès maintenant </p>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 pb-30 offset-md-3 offset-lg-0">
+            <div class="col-sm-12 col-md-4 pb-30">
                 <div class="service-item">
                     <div class="service-image">
-                        <img src="assets/images/service-3.jpg" alt="service">
+                        <img src="{{ asset('image/delivry.jpg') }}" alt="service">
                     </div>
                     <div class="service-content">
-                        <h3>3. Home Delivery</h3>
-                        <p>Choose Your Best Combos From The Thousands Of Exciting Items.</p>
+                        <h3>3.Livraison à domicile</h3>
+                        <p>Choisissez vos meilleurs combos parmi les milliers d'articles passionnants.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    
+    {{-- </div>
+    </div> --}}
+
 </section>
 {{-- debut de categorir***************************************************************************************************************** --}}
 
@@ -476,7 +424,7 @@
 <section class="reservation-section p-tb-100">
     <div class="container position-relative">
         <div class="section-title">
-            <h2 class="color-white">Make A Reservation</h2>
+            <h2 class="color-white">faire une réservation</h2>
         </div>
         <div class="reservation-form-area">
             <form>
@@ -513,18 +461,10 @@
                         </div>
                     </div>
                 </div>
-                <button class="btn">Book A Table Now</button>
+                <button class="btn">Enyoyer</button>
             </form>
         </div>
     </div>
 </section>
-
-
-
-
-
-
-
-
 
 @endsection

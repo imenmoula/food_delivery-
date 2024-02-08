@@ -35,6 +35,8 @@ class AppServiceProvider extends ServiceProvider
         
 
         View::composer('*', function ($view) {
+
+            
             // Check if the user has an existing session
             if (!session()->has('guest_session')) {
                 // Generate a unique session ID for the guest

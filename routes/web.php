@@ -99,4 +99,4 @@ Route::get('/admin/order/{id}/show', 'admin\OrderController@show')->name('admin.
 Route::delete('/admin/order/{id}', 'admin\OrderController@destroy')->name('admin.order.destroy');
 Route::get('/admin/order/{id}/edit', 'admin\OrderController@edit')->name('admin.order.edit');
 Route::put('/admin/order/{id}', 'admin\OrderController@update')->name('admin.order.update');
-
+// ***********************************************************petit dej*/////

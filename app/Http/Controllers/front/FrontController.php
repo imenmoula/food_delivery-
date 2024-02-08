@@ -25,4 +25,6 @@ class FrontController extends Controller
        
         return view('front.includes.detailMenu',compact('menu')); 
     }
+    
+
 }
