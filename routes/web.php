@@ -24,19 +24,19 @@ use GuzzleHttp\Promise\Create;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('front.home');
 });
 Route::get('/food','\App\Http\Controllers\testcontrolleur@food',);
 Route::get('/bar','\App\Http\Controllers\testcontrolleur@bar',);
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('master');
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
 
 /*******Navigation ************************/ 
-Route::get('/home',[HomeController::class,'index'])
+Route::get('/my-account',[HomeController::class,'index'])
 ->middleware(['auth'])->name('home');
 
 

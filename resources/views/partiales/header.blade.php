@@ -243,16 +243,18 @@
                                         <div class="authentication-details">
                                             <div class="authentication-details-item active"
                                                 data-authentication-details="1">
-                                                <form>
+                                                
+                                                <form method="POST" action="{{ route('login') }}">
+                                                    @csrf
                                                     <div class="form-group mb-20">
                                                         <div class="input-group">
-                                                            <input type="text" class="form-control"
+                                                            <input type="email" name="email" class="form-control"
                                                                 placeholder="User Name" />
                                                         </div>
                                                     </div>
                                                     <div class="form-group mb-20">
                                                         <div class="input-group">
-                                                            <input type="password" class="form-control"
+                                                            <input type="password" name="password" class="form-control"
                                                                 placeholder="Password" />
                                                         </div>
                                                     </div>
@@ -271,9 +273,7 @@
                                                     </div>
                                                     <div class="authentication-btn">
                                                         <button class="btn full-width btn-border mb-20">Log In</button>
-                                                        <button class="btn full-width"><i
-                                                                class="icofont-google-plus"></i>Log In With
-                                                            Google</button>
+                                                        
                                                     </div>
                                                 </form>
                                             </div>
