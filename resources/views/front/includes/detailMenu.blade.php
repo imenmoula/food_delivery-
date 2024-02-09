@@ -137,7 +137,7 @@
                     <div class="product-action-info mb-20">
                         <div class="d-flex flex-wrap align-items-center
                                             product-quantity">
-                            <a href="#" class="btn btn-icon product-quantity-item">
+                            <a href="{{ route('cart.store', $menu->id) }}" class="btn btn-icon product-quantity-item">
                                 Add To Cart
                                 <i class="flaticon-shopping-cart-black-shape"></i>
                             </a>
@@ -150,6 +150,10 @@
                         </div>
                     </div>
                 </div>
+                <div class="product-action-info">
+                    <div class="product-add-wishlist">
+                        <a href="#"><i class="flaticon-heart"></i>Add To Wishlist</a>
+                </div>
 
             </div>
         </div>
@@ -157,9 +161,6 @@
 </div>
 
 
-</div>
-</div>
-</div>
 
 
 @endsection

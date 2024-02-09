@@ -53,23 +53,13 @@
                                         <img src="{{ asset('assets/uploads/menus/' . $m->image) }}"
                                             alt="menu">
                                     </div>
-                                    <br>
-                                    <br>
-                                    <br>
-                                    <div class="d-flex">
-                                        <a href="{{route('front.includes.detailMenu', $m->id)}}" class="btn btn-primary shadow btn-sm sharp mr-3"><i class="fas fa-eye fa-lg"></i></a>                                        
-                                        <a href="#" class="btn btn-primary shadow btn-sm sharp mr-3"><i class="fas fa-heart fa-lg"></i></a>
-                                        <a href="#" class="btn btn-primary shadow btn-sm sharp mr-3"><i class="fas fa-thumbs-down fa-lg"></i></a>
-                                    </div>
-                                    <br>
+                                   
                                     
-                                    <a href="{{ route('cart.store', $m->id) }}" type="button" class="btn btn-yellow">
+                                    <a href="{{route('front.includes.detailMenu', $m->id)}}" type="button" class="btn btn-yellow">
                                         Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
                                     </a>
                                 </div>
                             @endforeach
-
-
 
 
 

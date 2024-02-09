@@ -100,3 +100,12 @@ Route::delete('/admin/order/{id}', 'admin\OrderController@destroy')->name('admin
 Route::get('/admin/order/{id}/edit', 'admin\OrderController@edit')->name('admin.order.edit');
 Route::put('/admin/order/{id}', 'admin\OrderController@update')->name('admin.order.update');
 // ***********************************************************petit dej*/////
+Route::get('/front/includes/{id}/menu','front\FrontController@view')->name('front.includes.view');
+// ************************************************************gruad user/////////////
+Route::get('/admin/User/index', 'admin\UserController@index')->name('admin.User.index');
+Route::get('/admin/User/{id}/show', 'admin\UserController@show')->name('admin.User.show');
+Route::get('/admin/User/create', 'admin\UserController@create')->name('admin.User.create');
+Route::post('/admin/User/store', 'admin\UserController@store')->name('admin.User.store');
+Route::get('/admin/User/{id}/edit', 'admin\UserController@edit')->name('admin.User.edit');
+Route::put('/admin/User/{id}/update', 'admin\UserController@update')->name('admin.User.update');
+Route::delete('/admin/User/{id}/destroy', 'admin\UserController@destroy')->name('admin.User.destroy');

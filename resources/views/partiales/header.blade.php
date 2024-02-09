@@ -213,7 +213,7 @@
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">Notre MENU</a>
+                                    <a href="{{route('front.includes.view', 'menu') }}" class="nav-link">Notre MENU</a>
                                 </li>
 
                               
@@ -236,9 +236,9 @@
                                     <div class="authentication-close"><i class="flaticon-cancel"></i></div>
                                     <div class="authentication-body">
                                         <ul class="authentication-tab">
-                                            <li class="authentication-tab-item active" data-authentication-tab="1">Log
+                                            <li class="authentication-tab-item active" data-authentication-tab="1">Connexion
                                                 In</li>
-                                            <li class="authentication-tab-item" data-authentication-tab="2">Sign Up</li>
+                                            <li class="authentication-tab-item" data-authentication-tab="2">Inscrit</li>
                                         </ul>
                                         <div class="authentication-details">
                                             <div class="authentication-details-item active"
@@ -260,7 +260,8 @@
                                                     </div>
                                                     <div class="authentication-action mb-20">
                                                         <div class="authentication-action-item">
-                                                            <a href="forget-password.html">Forget Password?</a>
+                                                            <a href="">Forget Password?</a>
+                                                           
                                                         </div>
                                                         <div class="authentication-action-item">
                                                             <div class="custom-control custom-checkbox">
@@ -278,29 +279,33 @@
                                                 </form>
                                             </div>
                                             <div class="authentication-details-item" data-authentication-details="2">
-                                                <form>
+                                                <form method="POST" action="{{ route('register') }}">
+                                                    @csrf
                                                     <div class="form-group mb-20">
                                                         <div class="input-group">
-                                                            <input type="text" class="form-control"
-                                                                placeholder="User Name" />
+                                                            <input type="text"   name="name" :value="old('name')" class="form-control"
+                                                                placeholder="votre nom s' il vous plait" />
                                                         </div>
                                                     </div>
                                                     <div class="form-group mb-20">
                                                         <div class="input-group">
-                                                            <input type="text" class="form-control"
-                                                                placeholder="Email" />
+                                                            <input type="email" name="email" :value="old('email')" class="form-control"
+                                                                placeholder="votre email s' il vous plait" />
                                                         </div>
                                                     </div>
                                                     <div class="form-group mb-20">
                                                         <div class="input-group">
-                                                            <input type="password" class="form-control"
-                                                                placeholder="Password" />
+                                                            <input  type="password"
+                                                            name="password" class="form-control"
+                                                                placeholder="Mot de passe s' il vous plait" />
                                                         </div>
                                                     </div>
                                                     <div class="form-group mb-20">
                                                         <div class="input-group">
-                                                            <input type="password" class="form-control"
-                                                                placeholder="Confirm Password" />
+                                                            <input  type="password"
+                                                            name="password_confirmation"
+                                                             class="form-control"
+                                                            placeholder="Confirm Password" />
                                                         </div>
                                                     </div>
                                                     <div class="authentication-action mb-20">
@@ -329,19 +334,33 @@
                                 </div>
                             </div>
                             <div class="navbar-option-item navbar-option-search">
-                                <button class="dropdown-toggle" type="button" id="search1" data-bs-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    <i class="flaticon-loupe"></i>
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="search1">
-                                    <form>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Search">
-                                            <button><i class="flaticon-loupe"></i></button>
-                                        </div>
-                                    </form>
+                                <div class="dropdown">
+                                    <button class="dropdown-toggle" type="button" id="search1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="flaticon-loupe"></i>
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="search1">
+                                        {{-- Contenu du menu déroulant --}}
+                                        {{-- <form id="deleteForm{{$item->id}}" action="{{ route('cart.remove', $item->id) }}" method="post">
+                                            @csrf
+                                            @method('DELETE')
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="Search">
+                                                <button type="button" onclick="confirmDelete({{$item->id}})" style="background: black; color: white">
+                                                    <i class="flaticon-loupe"></i>
+                                                </button>
+                                            </div>
+                                        </form> --}}
+                                    </div>
                                 </div>
                             </div>
+
+                            <div class="navbar-option-item navbar-option-cart">
+                                <a href="#" class="productCart">
+                                    <i class="fas fa-heart "></i>
+                                </a>
+                                <span class="option-badge"></span>
+                            </div>
+
                             <div class="navbar-option-item navbar-option-cart">
                                 <a href="#" class="productCart">
                                     <i class="flaticon-supermarket-basket"></i>

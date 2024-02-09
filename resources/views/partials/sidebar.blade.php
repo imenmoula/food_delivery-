@@ -17,8 +17,23 @@
 
             <li>
                 <a href="{{ url('admin/order/index') }}" class="ai-icon" aria-expanded="false">
-                    <i class="flaticon-xxx"></i> 
+                    
                     <span class="nav-text">Commande</span>
+                </a>
+            </li>
+
+
+            <li>
+                <a href="{{ url('admin/User/index') }}" class="ai-icon" aria-expanded="false">
+                    
+                    <span class="nav-text">Utilisateur</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ url('admin/User/livreur') }}" class="ai-icon" aria-expanded="false">
+                    
+                    <span class="nav-text">Livreur</span>
                 </a>
             </li>
             

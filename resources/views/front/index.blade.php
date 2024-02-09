@@ -206,7 +206,7 @@
                                 </div>
                                 <div class="combo-two-text">
                                     <h3>{{ $m->description }}</h3>
-                                    <a href="shop-details.html" class="btn btn-border btn-small">
+                                    <a href="{{ route('cart.store', $m->id) }}" class="btn btn-border btn-small">
                                         Commander maintenant <i class="flaticon-shopping-cart-black-shape"></i>
                                     </a>
                                 </div>
@@ -270,9 +270,7 @@
         </div>
     </div>
     
-    {{-- </div>
-    </div> --}}
-
+    
 </section>
 {{-- debut de categorir***************************************************************************************************************** --}}
 

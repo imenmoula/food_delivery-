@@ -25,6 +25,14 @@ class FrontController extends Controller
        
         return view('front.includes.detailMenu',compact('menu')); 
     }
+  public function view($id)
+  {
+    $categories= Category::with('menu')->get();
+     $menu=Menu::with('category')->get();
+
+
+    return view('front.includes.menu',compact('menu','categories'));
+  }
     
 
 }
