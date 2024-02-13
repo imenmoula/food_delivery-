@@ -58,10 +58,9 @@
             <div class="mobile-nav">
                 <a href="{{ route('front.index') }}" class="mobile-brand">
                   
-                    <img src="{{ asset('user/assets/images/logo-black.png') }}" alt="logo"
-                        class="blue-logo logo1">
-                    <img src="{{ asset('user/assets/images/logo.png') }}" alt="logo"
-                        class="logo2">
+                    <img src="{{ asset('image/logo2.jpg') }}" alt="logo" class="rounded-lg mr-2" width="50" height="50">
+                    {{-- <img src="{{ asset('user/assets/images/logo.png') }}" alt="logo"
+                        class="logo2"> --}}
                 </a>
 
                 <div class="navbar-option d-flex align-items-center">

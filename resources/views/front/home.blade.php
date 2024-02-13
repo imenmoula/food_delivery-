@@ -10,8 +10,8 @@
     <meta name="author" content="HiBootstrap">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <title>Fafo - Fast Food & Restaurant HTML Template</title>
-    <link rel="icon" href="{{ asset('user/assets/images/tab.png') }}" type="image/png"
+    <title>Moula FOOD </title>
+    <link rel="icon" href="{{ asset('user/assets/images/logo-black.png') }}" type="image/png"
         sizes="16x16">
 
     <link rel="stylesheet" href="{{ asset('user/assets/css/bootstrap.min.css') }}"
@@ -67,6 +67,12 @@
         media="all" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-..." crossorigin="anonymous" />
+        <style>
+        img.logo.logo1 {
+            height: 88px;
+            width: 131px;
+        }
+            </style>
 
     <!--[if IE]>
             <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>

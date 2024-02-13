@@ -36,6 +36,20 @@
                     <span class="nav-text">Livreur</span>
                 </a>
             </li>
+
+            <li>
+                <a href="{{ url('admin/User/livreur') }}" class="ai-icon" aria-expanded="false">
+                    
+                    <span class="nav-text">Admin</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ url('admin/User/livreur') }}" class="ai-icon" aria-expanded="false">
+                    
+                    <span class="nav-text">Reservation</span>
+                </a>
+            </li>
             
         </ul>
 
