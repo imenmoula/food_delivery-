@@ -47,17 +47,17 @@
                                 
                                 <p class="header-subtitle-name">
                                     
-                                    Double Chicken <span>+</span> Chicken <span>+</span> Bacon <span>=</span>
+                                    Chorba <span>+</span>brike<span>+</span>Dattes farcie<span>=</span>
                                 </p>
                                 <p class="header-subtitle-price">
                                     
-                                    <span>45 <small>DT</small></span>
+                                    <span>10<small>DT</small></span>
                                 </p>
                                 <div class="header-content-cart">
                                     <div class="header-cart-button">
                                         <a href="#"><i class="icofont-plus"></i></a>
                                     </div>
-                                    <div class="header-cart-text"></div>
+                                    <div class="header-cart-text">Commander maintenant</div>
                                 </div>
                             </div>
                         </div>
@@ -130,17 +130,17 @@
                             style="z-index: 7;white-space: normal;font-style:normal;">
                             <div class="header-content-subtitle">
                                 <p class="header-subtitle-name">
-                                    Double Chicken <span>+</span> Burger <span>+</span> Drinks <span>=</span>
+                                    Cordon bleu <span>+</span> Burger <span>+</span> boisson<span>=</span>
                                 </p>
                                 <p class="header-subtitle-price">
-                                    Only
-                                    <span>41.50 <small>DT</small></span>
+                                    
+                                    <span>20 <small>DT</small></span>
                                 </p>
                                 <div class="header-content-cart">
                                     <div class="header-cart-button">
                                         <a href="#"><i class="icofont-plus"></i></a>
                                     </div>
-                                    <div class="header-cart-text"></div>
+                                    <div class="header-cart-text">Commander maintenant</div>
                                 </div>
                             </div>
                         </div>
@@ -240,8 +240,8 @@
                         <img src="{{  asset('user/assets/images/service-1.jpg') }}" alt="service">
                     </div>
                     <div class="service-content">
-                        <h3>1. Chez Happyness Food, les plats arrivent sur place rapidement</h3>
-                        <p>Découvrez notre large sélection de délices chez Happyness Food </p>
+                        <h3>1. Chez Moula Food, les plats arrivent sur place rapidement</h3>
+                        <p>Découvrez notre large sélection de délices chez Moula Food </p>
                     </div>
                 </div>
             </div>

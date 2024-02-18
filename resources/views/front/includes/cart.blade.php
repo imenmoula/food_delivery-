@@ -83,17 +83,19 @@
                         <td>{{ $item->price }}  DT</td>
                         <td>
                             <div class="cart-quantity">
-                                <input type="hidden " class="product_id" value="{{ $item->id }}">
-
+                                <input type="hidden" class="product_id" value="{{ $item->id }}">
+                                
                                 <div class="input-group-prepend decrement-btn changeQuantity" style="cursor: pointer">
-                                <button class="qu-btn dec  ">-</button>
+                                    <button class="qu-btn dec">+</button>
                                 </div>
-                                <input type="number" class="qty-input" value="{{ $item->quantity }}" class="form-control quantity" class="quantity"/>
+                                
+                                <input type="number" class="qty-input form-control quantity" value="{{ $item->quantity }}" />
+                                
                                 <div class="input-group-prepend increment-btn changeQuantity" style="cursor: pointer">
-                                    
-                                <button class="qu-btn inc">+</button>
+                                    <button class="qu-btn inc">+</button>
                                 </div>
                             </div>
+                            
                         </td>
                         <td class="td-total-price">
                             {{ $item->price *   $item->quantity }}Dt

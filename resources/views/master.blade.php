@@ -7,11 +7,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Davur Restaurant | Dashboard</title>
+    <title>dashboard admin</title>
 	
 	<meta name="description" content="Some description for the page"/>
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="public/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('admin/images/favicon.png') }}">
 	
 	
 	
@@ -51,9 +51,7 @@
         ***********************************-->
         <div class="nav-header">
             <a href="index.html" class="brand-logo">
-							<img class="logo-abbr" src="{{asset('admin/images/logo.png')}}" alt="">
-						                <img class="logo-compact" src={{asset('admin/images/logo-text.png')}}" alt="">
-                <img class="brand-title" src="{{asset('admin/images/logo-text.png')}}" alt="">
+							<img class="logo-abbr" src="{{asset('admin/images/favicon.png')}}"class="rounded-lg mr-3" width ="150px" height="150px"   alt="">
 				
             </a>
 

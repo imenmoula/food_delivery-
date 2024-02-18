@@ -123,7 +123,7 @@
                 <div class="col-sm-12 col-md-6 col-lg-4 offset-md-3 offset-lg-0">
                     <div class="steps-item">
                         <h3>3.S'amuser </h3>
-                        <p>S'amuser avec notre nourriture Happyness Food et très gourmande.</p>
+                        <p>S'amuser avec notre nourriture Moula Food et très gourmande.</p>
                     </div>
                 </div>
             </div>

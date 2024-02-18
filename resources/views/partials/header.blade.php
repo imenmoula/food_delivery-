@@ -23,7 +23,7 @@
 							<div class="header-info">
 								<span>Bonjour, <strong>{{ Auth::user()->name }}</strong></span>
 							</div>
-							<img src="{{asset('admin/images/profile/pic1.jpg')}}" width="20" alt=""/>
+							<img src="{{ asset('admin/images/profile/profile.webp') }}" width="250" alt=""/>
 						</a>
 						<div class="dropdown-menu dropdown-menu-right">
 							<a href="" class="dropdown-item ai-icon">

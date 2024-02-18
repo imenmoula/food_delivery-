@@ -50,6 +50,13 @@
                     <span class="nav-text">Reservation</span>
                 </a>
             </li>
+
+            <li>
+                <a href="{{ url('admin/User/livreur') }}" class="ai-icon" aria-expanded="false">
+                    
+                    <span class="nav-text">Contact</span>
+                </a>
+            </li>
             
         </ul>
 
