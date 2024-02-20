@@ -33,6 +33,9 @@ class FrontController extends Controller
 
     return view('front.includes.menu',compact('menu','categories'));
   }
-    
+    public function Apropos()
+    {
+      return view ('front.includes.Apropos');
+    }
 
 }

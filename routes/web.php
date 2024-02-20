@@ -11,6 +11,7 @@ use App\Http\Controllers\HomeController;
 use App\Models\category;
 use app\Models\Menu;
 use GuzzleHttp\Promise\Create;
+use Symfony\Component\Routing\Annotation\Route as AnnotationRoute;
 
 /*
 |--------------------------------------------------------------------------
@@ -109,3 +110,5 @@ Route::post('/admin/User/store', 'admin\UserController@store')->name('admin.User
 Route::get('/admin/User/{id}/edit', 'admin\UserController@edit')->name('admin.User.edit');
 Route::put('/admin/User/{id}/update', 'admin\UserController@update')->name('admin.User.update');
 Route::delete('/admin/User/{id}/destroy', 'admin\UserController@destroy')->name('admin.User.destroy');
+// ///////////////////////////////////////////////////////////////////////////
+Route::get('/front/includes/Apropos','front\frontController@Apropos')->name('front.includes.Apropos');

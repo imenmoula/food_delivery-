@@ -217,7 +217,7 @@
 
                               
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">A propos</a>
+                                    <a href="{{ route('front.includes.Apropos') }}" class="nav-link">A propos</a>
                                     
                                 </li>
                                 <li class="nav-item">
