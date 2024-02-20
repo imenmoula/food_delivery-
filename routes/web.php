@@ -112,3 +112,5 @@ Route::put('/admin/User/{id}/update', 'admin\UserController@update')->name('admi
 Route::delete('/admin/User/{id}/destroy', 'admin\UserController@destroy')->name('admin.User.destroy');
 // ///////////////////////////////////////////////////////////////////////////
 Route::get('/front/includes/Apropos','front\frontController@Apropos')->name('front.includes.Apropos');
+Route::get('/front/includes/contactUs','front\frontcontroller@contactUs')->name('front.includes.contactUs');
+Route::get('/front/includes/store','front\frontcontroller@store')->name('front.includes.store');
