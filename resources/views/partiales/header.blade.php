@@ -280,6 +280,17 @@
                                             <div class="authentication-details-item" data-authentication-details="2">
                                                 <form method="POST" action="{{ route('register') }}">
                                                     @csrf
+
+                                                    @if ($errors->any())
+                                                            <div class="alert alert-danger">
+                                                                <ul>
+                                                                    @foreach ($errors->all() as $error)
+                                                                        <li>{{ $error }}</li>
+                                                                    @endforeach
+                                                                </ul>
+                                                            </div>
+                                                        @endif
+
                                                     <div class="form-group mb-20">
                                                         <div class="input-group">
                                                             <input type="text"   name="name" :value="old('name')" class="form-control"
@@ -307,24 +318,10 @@
                                                             placeholder="Confirm Password" />
                                                         </div>
                                                     </div>
-                                                    <div class="authentication-action mb-20">
-                                                        <div class="authentication-action-item">
-                                                            <div class="custom-control custom-checkbox">
-                                                                <input type="checkbox" class="custom-control-input"
-                                                                    id="check2">
-                                                                <label class="custom-control-label" for="check2">I agree
-                                                                    that my submitted data is being collected and
-                                                                    stored. For further details on handling user data,
-                                                                    see our <a href="privacy-policy.html">Privacy
-                                                                        Policy</a>.</label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                   
                                                     <div class="authentication-btn">
                                                         <button class="btn full-width btn-border mb-20">Log In</button>
-                                                        <button class="btn full-width"><i
-                                                                class="icofont-google-plus"></i>Log In With
-                                                            Google</button>
+                                                      
                                                     </div>
                                                 </form>
                                             </div>

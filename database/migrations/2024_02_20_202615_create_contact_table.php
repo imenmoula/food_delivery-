@@ -17,8 +17,6 @@ class CreateContactTable extends Migration
             $table->id();
             $table->unsignedBigInteger('users_id');
             $table->foreign('users_id')->references('id')->on('users')->onDelete('cascade');
-            $table->text('sujet');
-            $table->text('message');
             $table->rememberToken();
             $table->timestamps();
 

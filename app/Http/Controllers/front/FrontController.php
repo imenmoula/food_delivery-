@@ -61,7 +61,7 @@ class FrontController extends Controller
             $c->sujet = $request->input('sujet');
           
 
-            $u->save();
+            $c->save();
     
             return redirect()->route('admin.category.create')->with('success', 'Catégorie ajoutée avec succès');
         } catch (\Exception $e) {

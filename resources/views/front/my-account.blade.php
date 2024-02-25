@@ -47,7 +47,16 @@
                         <li class="active"><a href="my-account.html">My Account</a></li>
                         <li><a href="my-orders.html">My Orders</a></li>
                         <li><a href="my-addresses.html">My Addresses</a></li>
-                        <li><a href="index.html">Sign Out</a></li>
+                        <li><a href="my-addresses.html">My Addresses</a></li>
+
+                        <li>
+                           
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+                            <a href="#"><button type="submit" class="logout-button">Déconnexion</button></a>
+                        
+                        </form>
+                    </li>
                     </ul>
                 </div>
             </div>

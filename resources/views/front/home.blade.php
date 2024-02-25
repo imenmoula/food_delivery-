@@ -72,6 +72,17 @@
             height: 88px;
             width: 131px;
         }
+
+        .logout-button {
+            /* Ajoutez ici les styles que vous souhaitez appliquer uniquement au bouton de déconnexion */
+            background: none;
+            border: none;
+            padding: 0;
+            font: inherit;
+            cursor: pointer;
+            color: white;
+        }
+
             </style>
 
     <!--[if IE]>

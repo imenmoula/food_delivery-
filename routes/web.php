@@ -26,7 +26,7 @@ use Symfony\Component\Routing\Annotation\Route as AnnotationRoute;
 
 Route::get('/', function () {
     return view('front.home');
-});
+})->name('acceuil');
 Route::get('/food','\App\Http\Controllers\testcontrolleur@food',);
 Route::get('/bar','\App\Http\Controllers\testcontrolleur@bar',);
 
