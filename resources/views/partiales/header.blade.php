@@ -105,23 +105,8 @@
                                                         placeholder="Password" />
                                                 </div>
                                             </div>
-                                            <div class="authentication-action mb-20">
-                                                <div class="authentication-action-item">
-                                                    <a href="forget-password.html">Forget Password?</a>
-                                                </div>
-                                                <div class="authentication-action-item">
-                                                    <div class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" id="check3">
-                                                        <label class="custom-control-label" for="check3">Remember
-                                                            Me</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="authentication-btn">
-                                                <button class="btn full-width btn-border mb-20">Log In</button>
-                                                <button class="btn full-width"><i class="icofont-google-plus"></i>Log In
-                                                    With Google</button>
-                                            </div>
+                                            
+                                         
                                         </form>
                                     </div>
                                     <div class="authentication-details-item" data-authentication-details="2">
@@ -148,21 +133,10 @@
                                                         placeholder="Confirm Password" />
                                                 </div>
                                             </div>
-                                            <div class="authentication-action mb-20">
-                                                <div class="authentication-action-item">
-                                                    <div class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input" id="check4">
-                                                        <label class="custom-control-label" for="check4">I agree that my
-                                                            submitted data is being collected and stored. For further
-                                                            details on handling user data, see our <a
-                                                                href="privacy-policy.html">Privacy Policy</a>.</label>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                           
                                             <div class="authentication-btn">
                                                 <button class="btn full-width btn-border mb-20">Log In</button>
-                                                <button class="btn full-width"><i class="icofont-google-plus"></i>Log In
-                                                    With Google</button>
+                                                
                                             </div>
                                         </form>
                                     </div>
@@ -236,7 +210,7 @@
                                     <div class="authentication-body">
                                         <ul class="authentication-tab">
                                             <li class="authentication-tab-item active" data-authentication-tab="1">Connexion
-                                                In</li>
+                                            </li>
                                             <li class="authentication-tab-item" data-authentication-tab="2">Inscrit</li>
                                         </ul>
                                         <div class="authentication-details">
@@ -245,34 +219,30 @@
                                                 
                                                 <form method="POST" action="{{ route('login') }}">
                                                     @csrf
+                                                    @if ($errors->any())
+                                                    <div class="alert alert-danger">
+                                                        <ul>
+                                                            @foreach ($errors->all() as $error)
+                                                                <li>{{ $error }}</li>
+                                                            @endforeach
+                                                        </ul>
+                                                    </div>
+                                                @endif
                                                     <div class="form-group mb-20">
                                                         <div class="input-group">
                                                             <input type="email" name="email" class="form-control"
-                                                                placeholder="User Name" />
+                                                                placeholder="votre email" />
                                                         </div>
                                                     </div>
                                                     <div class="form-group mb-20">
                                                         <div class="input-group">
                                                             <input type="password" name="password" class="form-control"
-                                                                placeholder="Password" />
+                                                                placeholder="votre mot de passe " />
                                                         </div>
                                                     </div>
-                                                    <div class="authentication-action mb-20">
-                                                        <div class="authentication-action-item">
-                                                            <a href="">Forget Password?</a>
-                                                           
-                                                        </div>
-                                                        <div class="authentication-action-item">
-                                                            <div class="custom-control custom-checkbox">
-                                                                <input type="checkbox" class="custom-control-input"
-                                                                    id="check1">
-                                                                <label class="custom-control-label"
-                                                                    for="check1">Remember Me</label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                    
                                                     <div class="authentication-btn">
-                                                        <button class="btn full-width btn-border mb-20">Log In</button>
+                                                        <button class="btn full-width btn-border mb-20">Connexion</button>
                                                         
                                                     </div>
                                                 </form>
@@ -320,7 +290,7 @@
                                                     </div>
                                                    
                                                     <div class="authentication-btn">
-                                                        <button class="btn full-width btn-border mb-20">Log In</button>
+                                                        <button class="btn full-width btn-border mb-20">Connexion</button>
                                                       
                                                     </div>
                                                 </form>

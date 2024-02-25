@@ -4,22 +4,22 @@
     <div class="header-padding position-relative">
         <div class="header-page-shape">
             <div class="header-page-shape-item">
-                <img src="assets/images/header-shape-1.png" alt="shape">
+                <img src="{{asset('user/assets/images/header-shape-1.png')}}" alt="shape">
             </div>
             <div class="header-page-shape-item">
-                <img src="assets/images/header-shape-2.png" alt="shape">
+                <img src="{{asset('user/assets/images/header-shape-2.png')}}" alt="shape">
             </div>
             <div class="header-page-shape-item">
-                <img src="assets/images/header-shape-3.png" alt="shape">
+                <img src="{{asset('user/assets/images/header-shape-3.png')}}" alt="shape">
             </div>
             <div class="header-page-shape-item">
-                <img src="assets/images/header-shape-1.png" alt="shape">
+                <img src="{{asset('user/assets/images/header-shape-1.png')}}" alt="shape">
             </div>
             <div class="header-page-shape-item">
 
             </div>
             <div class="header-page-shape-item">
-                <img src="assets/images/header-shape-1.png" alt="shape">
+                <img src="{{asset('user/assets/images/header-shape-1.png')}}" alt="shape">
             </div>
 
         </div>
@@ -69,7 +69,7 @@
                             </div>
                             <div class="account-avatar-info">
                                 <div class="account-avatar-thumb">
-                                    <img src="assets/images/comment-1.jpg" alt="avatar">
+                                    <img src="{{asset('user/assets/images/comment-1.jpg')}}" alt="avatar">
                                 </div>
                                 <ul class="account-avatar-action">
                                     <li><button class="btn">Upload</button></li>
