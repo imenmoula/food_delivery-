@@ -38,7 +38,7 @@ Développé dans le cadre de mon stage de perfectionnement, ce site web permet �
 
 ### Page d'accueil
 <p align="center">
-  <img src="screenshots/2.jpg" width="900" alt="Page d'accueil">
+  <img src="screenshots/2.jpg" width="750" alt="Page d'accueil">
 </p>
 
 ### Menu du restaurant
@@ -53,9 +53,9 @@ Développé dans le cadre de mon stage de perfectionnement, ce site web permet �
   <img src="screenshots/5.jpg" width="500" alt="Passage de commande">
     <img src="screenshots/6.jpg" width="500" alt="Passage de commande">
 </p>
-### liste des commande chez admin 
+ ### Liste des commande chez admin 
 <p align="center">
-  <img src="screenshots/admin4.jpg" width="500" alt="Réservation de table">
+  <img src="screenshots/admin4.jpg" width="750" alt="Réservation de table">
 </p
     
 ### Espace compte utilisateur
