@@ -43,23 +43,24 @@ Développé dans le cadre de mon stage de perfectionnement, ce site web permet �
 
 ### Menu du restaurant
 <p align="center">
-  <img src="screenshots/1.jpg" width="900" alt="Menu du restaurant">
+  <img src="screenshots/1.jpg" width="750" alt="Menu du restaurant">
 </p>
 
-### Réservation d'une table
-<p align="center">
-  <img src="screenshots/reservation.png" width="900" alt="Réservation de table">
-</p>
+>
 
 ### Passage d'une commande
 <p align="center">
   <img src="screenshots/5.jpg" width="500" alt="Passage de commande">
     <img src="screenshots/6.jpg" width="500" alt="Passage de commande">
 </p>
-
+### liste des commande chez admin 
+<p align="center">
+  <img src="screenshots/admin4.jpg" width="500" alt="Réservation de table">
+</p
+    
 ### Espace compte utilisateur
 <p align="center">
-  <img src="screenshots/3.jpg" width="900" alt="Compte utilisateur">
+  <img src="screenshots/3.jpg" width="500" alt="Compte utilisateur">
 </p>
 
 ---
